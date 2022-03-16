@@ -1,13 +1,99 @@
 $base-padding: 24px;
 
-$header-topbar-bg: #434343;
-$header-bg: #363636;
+//$header-topbar-bg: #434343;
+//$header-bg: #363636;
+//$footer-claim-bg: #2a2a2a;
+//$footer-bg: #363636;
+//$primary: #d58e32;
+//$text-color: #2a2a2a;
+//$form-border-color: #292929;
 
-$footer-claim-bg: #2a2a2a;
-$footer-bg: #363636;
 
-$primary: #d58e32;
+//COLOR DEFINITION - DON'T USE IN PROJECT
 
-$text-color: #2a2a2a;
+$orange: #d58e32;
+$black: #2a2a2a; //use it too as #292929 and rgb(42, 42, 42)
+$white: #ffffff;
 
-$form-border-color: #292929;
+$grayLight: #b6b6b6;
+$grayMedium: #434343;
+$grayDark: #363636;
+//name from RBG table number
+$gray225: #e1e1e1; // use it too as #e2e2e2 and rgb(216, 216, 216);
+$gray244: #f4f5f7;
+$gray224: rgb(224, 227, 237);
+$gray169: rgb(169, 169, 169);
+ 
+
+//ELEMENTS COLOR
+
+$button-bg: $black;
+$button-text: $white;
+$button-text-border-hover: $white;
+$button-text-hover-bg: $orange;
+$button-outline-text: $black;
+$button-outline-border: $black;
+$button-outline-hover-text: $black;
+$button-outline-hover: $white;
+
+$featureBox-border: $grayLight;
+$featureBox-bg: $white;
+$featureBox-text: $black;
+$featureBox-bg: $white;
+$fenitureBox-active-bg: $orange;
+$featureBox-active-border: $orange;
+$featureBox-active-content: $orange;
+
+$productBox-root-bg: $white;
+$productBox-root-border: $gray225;
+$productBox-photo-bg: $gray244;
+$productBox-sale-bg: $black;
+$productBox-sale-text: $white;
+$productBox-header: $orange;
+$productBox-stars-text: $black;
+$productBox-border: $black;
+$productBox-border-before: $orange;
+
+$newFeniture-border: $gray225;
+$newFeniture-header-text: $orange;
+$newFeniture-header-border: $orange;
+$newFeniture-text: $black;
+$newFeniture-menu-bg: $white;
+$newFeniture-link-bg: $gray225;
+$newFeniture-hover-border: $orange;
+$newFeniture-hover-bg: $orange;
+
+$productSearch-border: $black;
+$productSearch-text: $black;
+$productSearch-icon: $orange;
+$productSearch-placeholder: $black;
+
+$companyClaim-bg: $grayDark;
+$companyClaim-phone-text: $gray225;
+$companyClaim-icon: $orange;
+$companyClaim-cartBox-text: $white;
+$companyClaim-cartIcon-bg: $orange;
+$companyClaim-cartCounter-bg: $grayDark;
+$companyClaim-cartCounter-text: $gray224;
+$companyClaim-cartCounter-hover-bg: $orange;
+
+$footer-bg: $grayDark;
+$footer-head-text: $white;
+$footer-link-text: $gray169;
+$footer-link-text-hover: $white;
+$footer-claim-bg: $black;
+$footer-claim-text: $gray169;
+$footer-media-text: $gray169;
+$footer-media-text-hover: $orange;
+
+$menu-bg: $white;
+$menu-link-text: $black;
+$menu-link-border: $white;
+$menu-link-hover-bg: $orange;
+$menu-link-hover-text: $white;
+$menu-link-hover-border: $orange;
+$menu-link-active-border: $black;
+
+$topBar-bg: $grayMedium;
+$topBar-link: $white;
+$topBar-link-hover: $orange;
