@@ -29,3 +29,4 @@ Za każdym razem gdy wykonasz komendę `git commit` zostaną uruchomione testy j
 dla plików, które zostały wybrane za pomocą `git add` i mają być zapisane w commicie.
 
 # project-group
+# project-group
