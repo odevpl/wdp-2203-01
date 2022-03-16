@@ -61,12 +61,15 @@
     }
   }
 
-  &.active {
+  &:hover {
     .iconWrapper {
       color: #ffffff;
 
       &::after {
         background-color: $primary;
+        border-color: $primary;
+      }
+      &::before {
         border-color: $primary;
       }
     }
@@ -75,4 +78,8 @@
       color: $primary;
     }
   }
+}
+
+a:hover {
+  text-decoration: none;
 }
