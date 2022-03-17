@@ -51,7 +51,7 @@ const ProductBox = ({ name, price, promo, stars, image }) => (
         <div>
           {promo === 'sale' && <div className={styles.oldPrice}>$ {price} </div>}
         </div>
-        <div className={styles.price}>${price}</div>
+        <div className={styles.price}>$ {price}</div>
       </div>
     </div>
   </div>
