@@ -61,7 +61,7 @@
     }
   }
 
-  &.active {
+  &:hover {
     .iconWrapper {
       color: $featureBox-bg;
 
@@ -69,10 +69,17 @@
         background-color: $fenitureBox-active-bg;
         border-color: $featureBox-active-border;
       }
+      &::before {
+        border-color: $primary;
+      }
     }
 
     .content {
       color: $featureBox-active-content;
     }
   }
+}
+
+a:hover {
+  text-decoration: none;
 }
