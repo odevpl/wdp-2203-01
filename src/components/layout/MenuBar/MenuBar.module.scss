@@ -25,6 +25,7 @@
     }
 
     a {
+      @extend %animation;
       color: $menu-link-text;
       text-transform: uppercase;
       font-size: 12px;

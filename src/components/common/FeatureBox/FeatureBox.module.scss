@@ -6,6 +6,7 @@
   margin-top: 40px;
 
   .iconWrapper {
+    @extend %animation;
     height: 60px;
     transform: translateY(-50%);
     color: $featureBox-text;
@@ -19,6 +20,7 @@
     }
 
     &::before {
+      @extend %animation;
       content: "";
       border: 1px solid $featureBox-border;
       position: absolute;
@@ -33,6 +35,7 @@
     }
 
     &::after {
+      @extend %animation;
       content: "";
       width: 60px;
       height: 60px;
@@ -46,6 +49,7 @@
   }
 
   .content {
+    @extend %animation;
     text-transform: uppercase;
     color: $featureBox-text;
     margin-top: -0.5rem;
