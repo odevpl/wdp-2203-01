@@ -75,4 +75,17 @@
     justify-content: space-between;
     align-items: center;
   }
+  .priceWraper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .oldPrice {
+    color: rgb(194, 189, 189);
+    text-decoration: line-through;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 5px 10px;
+  }
 }
