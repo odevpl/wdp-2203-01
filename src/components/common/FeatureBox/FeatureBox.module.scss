@@ -70,7 +70,7 @@
         border-color: $featureBox-active-border;
       }
       &::before {
-        border-color: $primary;
+        border-color: $featureBox-active-border;
       }
     }
 
