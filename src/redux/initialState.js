@@ -20,6 +20,7 @@ const initialState = {
       myStars: 3,
       compareActive: false,
       isFavourite: true,
+      isCompare: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -31,6 +32,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       isFavourite: true,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -45,6 +47,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -55,10 +58,15 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+<<<<<<< HEAD
       favorites: true,
       myStars: 0,
       compareActive: false,
       isFavourite: false, 
+=======
+      isFavourite: false,
+      isCompare: false,
+>>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -69,9 +77,14 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+<<<<<<< HEAD
       favorites: false,
       myStars: 0,
       compareActive: false,
+=======
+      isFavourite: false,
+      isCompare: false,
+>>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -86,7 +99,11 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+<<<<<<< HEAD
 
+=======
+      isCompare: false,
+>>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -101,7 +118,11 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+<<<<<<< HEAD
 
+=======
+      isCompare: false,
+>>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -116,6 +137,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -130,6 +152,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -144,6 +167,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -158,6 +182,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -172,6 +197,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -186,6 +212,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -200,6 +227,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -214,6 +242,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -228,6 +257,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -242,6 +272,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -256,6 +287,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -270,6 +302,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -284,6 +317,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -298,6 +332,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -312,6 +347,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -326,6 +362,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -964,6 +1001,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
+      isCompare: false,
     },
   ],
   cart: {
