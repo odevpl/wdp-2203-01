@@ -5,10 +5,14 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStar,
+  //faHeart,
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import {
+  faStar as farStar,
+  faHeart as farHeart,
+} from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
 const ProductBox = ({ name, price, promo, stars }) => (
@@ -40,7 +44,9 @@ const ProductBox = ({ name, price, promo, stars }) => (
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <Button variant='outline'>
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          <FontAwesomeIcon className={styles.favoriteActive} icon={farHeart}>
+            Favorite
+          </FontAwesomeIcon>
         </Button>
         <Button variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
