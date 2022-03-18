@@ -111,6 +111,7 @@
     padding: 5px 10px;
   }
 
+
   .price {
     background-color: $productBox-price-bg;
     color: $productBox-price-text;
@@ -129,5 +130,10 @@
     .price {
       background-color: $productBox-price-hover-bg;
     }
+
+  .favoriteActive {
+    color: red;
+    font-weight: 900;
   }
+}
 }

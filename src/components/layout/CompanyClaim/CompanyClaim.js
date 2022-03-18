@@ -24,7 +24,13 @@ const CompanyClaim = () => (
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
             </div>
+<<<<<<< HEAD
             <div className={styles.cartCounter}>123456</div>
+=======
+            <div className={styles.cartCounter}>
+              <p>12345</p>
+            </div>
+>>>>>>> 2a81c1f (Add class: 'favouriteActive' to ProductBox)
           </a>
           <div className={styles.phoneNumber}>
             <p>
