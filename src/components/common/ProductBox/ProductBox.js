@@ -5,7 +5,7 @@ import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faStar,
-  //faHeart,
+  faHeart,
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +15,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars }) => (
+const ProductBox = ({ name, price, promo, stars, isFavourite, isCompare }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
@@ -44,12 +44,22 @@ const ProductBox = ({ name, price, promo, stars }) => (
     <div className={styles.actions}>
       <div className={styles.outlines}>
         <Button variant='outline'>
-          <FontAwesomeIcon className={styles.favoriteActive} icon={farHeart}>
-            Favorite
-          </FontAwesomeIcon>
+          {isFavourite && (
+            <FontAwesomeIcon className={styles.favoriteActive} icon={faHeart}>
+              Favorite
+            </FontAwesomeIcon>
+          )}
+          {!isFavourite && <FontAwesomeIcon icon={farHeart}>Favorite</FontAwesomeIcon>}
         </Button>
         <Button variant='outline'>
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+          {isCompare && (
+            <FontAwesomeIcon className={styles.compareActive} icon={faExchangeAlt}>
+              Add to compare
+            </FontAwesomeIcon>
+          )}
+          {!isCompare && (
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+          )}
         </Button>
       </div>
       <div className={styles.priceWraper}>
@@ -72,6 +82,8 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
+  isFavourite: PropTypes.bool,
+  isCompare: PropTypes.bool,
 };
 
 export default ProductBox;

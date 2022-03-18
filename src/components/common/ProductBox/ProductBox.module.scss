@@ -90,7 +90,10 @@
   }
 
   .favoriteActive {
-    color: red;
-    font-weight: 900;
+    color: $productBox-favourite-active;
+  }
+
+  .compareActive {
+    color: $productBox-compare-active;
   }
 }
