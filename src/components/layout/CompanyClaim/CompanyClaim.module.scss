@@ -47,7 +47,7 @@
       }
 
       .cartCounter {
-        width: 28px;
+        min-width: 28px;
         height: 27px;
         border-radius: 14px;
         background-color: $companyClaim-cartCounter-bg;
@@ -59,7 +59,13 @@
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translate(50%, -50%);
+        transform: translate(70%, -50%);
+      }
+
+      .cartCounter p {
+        margin: 0;
+        padding: 0 5px 0 5px;
+        max-width: 50px;
       }
 
       &:hover {
