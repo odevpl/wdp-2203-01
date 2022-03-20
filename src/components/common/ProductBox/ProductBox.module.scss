@@ -20,7 +20,7 @@
     align-items: flex-end;
     width: auto;
     max-width: 260px;
-  
+
 
   img {
     object-fit: cover;
@@ -48,6 +48,7 @@
       height: 40px;
       width: 100%;
       padding: 2px 6px;
+      opacity: 0;
     }
   }
 
@@ -93,6 +94,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .priceWraper {
     display: flex;
     flex-direction: row;
@@ -105,5 +107,25 @@
     font-weight: 500;
     line-height: 24px;
     padding: 5px 10px;
+  }
+
+  .price {
+    background-color: $productBox-price-bg;
+    color: $productBox-price-text;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 5px 10px;
+    font-weight: 400;
+  }
+
+  &:hover {
+
+    .buttons {
+      opacity: 1;
+    }
+
+    .price {
+      background-color: $productBox-price-hover-bg;
+    }
   }
 }
