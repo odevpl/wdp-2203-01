@@ -95,6 +95,10 @@
     align-items: center;
   }
 
+  .favorites {
+    background-color: $productBox-border-before;
+  }
+  
   .priceWraper {
     display: flex;
     flex-direction: row;
