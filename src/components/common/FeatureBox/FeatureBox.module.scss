@@ -83,3 +83,9 @@
 a:hover {
   text-decoration: none;
 }
+
+@media (max-width: 576px) {
+  .root {
+    min-height: 140px;
+  }
+}

@@ -3,3 +3,9 @@
 .root {
   padding: 5rem 0;
 }
+
+@media (max-width: 576px) {
+  .root {
+    //min-height: 140px;
+  }
+}
