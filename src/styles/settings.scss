@@ -107,7 +107,7 @@ $text-transition: 0.25s;
 
 %animation {
   transition-property: background-color, color;
-  transition-duration: $bg-transition, $text-transition, 1s;
+  transition-duration: $bg-transition, $text-transition;
   transition-timing-function: ease-out;
   &:hover {
   }
