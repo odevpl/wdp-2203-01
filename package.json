@@ -1,6 +1,7 @@
 {
   "name": "pizzeria-portal",
   "version": "0.1.0",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "start": "run-p start:* ",
@@ -64,12 +65,13 @@
     "react-test-renderer": "^16.9.0",
     "redux": "^4.0.4",
     "sass": " 1.43.4"
+
   },
   "devDependencies": {
     "husky": "^3.1.0",
     "lint-staged": "^9.4.0",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "2.13.9"
   }
 }

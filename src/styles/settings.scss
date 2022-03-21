@@ -1,3 +1,9 @@
+/*Color list*/
+
+$clear-sand: #dda255;
+
+
+
 $base-padding: 24px;
 
 //COLOR DEFINITION - DON'T USE IN PROJECT
@@ -45,6 +51,9 @@ $productBox-border: $black;
 $productBox-border-before: $orange;
 $productBox-favourite-active: $orange;
 $productBox-compare-active: $orange;
+$productBox-price-text: $white;
+$productBox-price-bg: $black;
+$productBox-price-hover-bg: $orange;
 
 $newFeniture-border: $gray225;
 $newFeniture-header-text: $orange;
@@ -89,3 +98,6 @@ $menu-link-active-border: $black;
 $topBar-bg: $grayMedium;
 $topBar-link: $white;
 $topBar-link-hover: $orange;
+
+/*General variables*/
+$primary: $clear-sand;
