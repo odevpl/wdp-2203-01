@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -15,7 +14,18 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars, isFavourite, isCompare, image }) => (
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  image,
+  addToFavorites,
+  removeFromFavorites,
+  id,
+  favorites,
+}) => (
+
   <div className={styles.root}>
     <div className={styles.photo}>
       <img src={image} alt='lux bed' />
@@ -44,13 +54,22 @@ const ProductBox = ({ name, price, promo, stars, isFavourite, isCompare, image }
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
-          {isFavourite && (
+
+        <Button
+          className={favorites ? styles.favorites : styles.outlines}
+          onClick={e => {
+            e.preventDefault();
+            favorites ? removeFromFavorites({ id }) : addToFavorites({ id });
+          }}
+          variant='outline'
+        >
+          {favorites && (
             <FontAwesomeIcon className={styles.favoriteActive} icon={faHeart}>
               Favorite
             </FontAwesomeIcon>
           )}
-          {!isFavourite && <FontAwesomeIcon icon={farHeart}>Favorite</FontAwesomeIcon>}
+          {!favourites && <FontAwesomeIcon icon={farHeart}>Favorite</FontAwesomeIcon>}
+           
         </Button>
         <Button variant='outline'>
           {isCompare && (
@@ -82,6 +101,10 @@ ProductBox.propTypes = {
   isFavourite: PropTypes.bool,
   isCompare: PropTypes.bool,
   image: PropTypes.node,
+  favorites: PropTypes.bool,
+  addToFavorites: PropTypes.func,
+  removeFromFavorites: PropTypes.func,
+  id: PropTypes.string,
 };
 
 export default ProductBox;
