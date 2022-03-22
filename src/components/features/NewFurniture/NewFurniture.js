@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -31,10 +30,10 @@ class NewFurniture extends React.Component {
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : undefined}
           >
             page {i}
           </a>
@@ -58,7 +57,9 @@ class NewFurniture extends React.Component {
                       {categories.map(item => (
                         <li key={item.id}>
                           <a
-                            className={item.id === activeCategory && styles.active}
+                            className={
+                              item.id === activeCategory ? styles.active : undefined
+                            }
                             onClick={() => this.handleCategoryChange(item.id)}
                           >
                             {item.name}
