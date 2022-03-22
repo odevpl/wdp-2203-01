@@ -10,6 +10,10 @@
     @media (max-width: 576px) { order: 3; }
   }
 
+  .elements :first-child {
+    @media (max-width: 576px) { order: 3; }
+  }
+
   .phoneNumber {
     p {
       margin: 0;
@@ -38,6 +42,10 @@
       position: relative;
       color: $companyClaim-cartBox-text;
       
+      @media (max-width: 576px) {
+        margin-right: 1.5rem;
+      }
+
       @media (max-width: 576px) {
         margin-right: 1.5rem;
       }
