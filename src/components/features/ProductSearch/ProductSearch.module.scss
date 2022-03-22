@@ -1,30 +1,25 @@
 @import "../../../styles/settings.scss";
-
 .root {
   border: 1px solid $productSearch-border;
   display: inline-flex;
   height: 45px;
   color: $productSearch-text;
-
   .category {
     border-right: 1px solid $productSearch-border;
     display: flex;
     align-items: center;
     position: relative;
-
     .icon:first-child {
       color: $productSearch-icon;
       position: absolute;
       left: 10px;
       z-index: 0;
     }
-
     .icon:last-child {
       position: absolute;
       right: 10px;
       z-index: 0;
     }
-
     select {
       -webkit-appearance: none;
       border: 0;
@@ -34,32 +29,26 @@
       z-index: 1;
       font-size: 14px;
     }
-
     select:hover {
       color: $primary;
     }
-
     select:focus {
       outline: none;
     }
   }
-
   .searchField {
     display: flex;
     align-items: center;
     position: relative;
-
     input {
       border: 0;
       padding-left: 10px;
       font-size: 14px;
       outline: none;
-
       &::placeholder {
         color: $productSearch-placeholder;
       }
     }
-
     button {
       border: 0;
       background-color: transparent;
