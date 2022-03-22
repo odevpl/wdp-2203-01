@@ -19,26 +19,27 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
-  moveLeft = () => {
-    const activePage = this.state.activePage;
-    if (activePage > 0) {
-      this.handlePageChange(activePage - 1);
-    }
-  };
-
-  moveRight = () => {
-    const activePage = this.state.activePage;
-    if (activePage < this.pagesCount - 1) {
-      this.handlePageChange(activePage + 1);
-    }
-  };
-
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    const moveLeft = () => {
+      const activePage = this.state.activePage;
+      if (activePage > 0) {
+        this.handlePageChange(activePage - 1);
+      }
+    };
+
+    const moveRight = () => {
+      const activePage = this.state.activePage;
+      const maxPage = pagesCount - 1;
+      if (activePage < maxPage) {
+        this.handlePageChange(activePage + 1);
+      }
+    };
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -55,7 +56,7 @@ class NewFurniture extends React.Component {
     }
 
     return (
-      <Swipeable leftActio={this.moveLeft} rightAction={this.moveRight}>
+      <Swipeable leftAction={moveLeft} rightAction={moveRight}>
         <div className={styles.root}>
           <div className='container'>
             <div className={styles.panelBar}>
