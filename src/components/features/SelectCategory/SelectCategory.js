@@ -6,9 +6,11 @@ const SelectCategory = () => (
     <li>
       Select a category
       <ul className={styles.dropdown}>
-        <li>category one</li>
-        <li>category two</li>
-        <li>category three</li>
+        <li>Bed</li>
+        <li>Chair</li>
+        <li>Sofa</li>
+        <li>Table</li>
+        <li>Dining</li>
       </ul>
     </li>
   </ul>
