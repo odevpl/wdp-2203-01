@@ -80,3 +80,54 @@
     }
   }
 }
+
+@media (max-width: 376px) {
+  .footerMenu {
+    .menuWrapper {
+      text-align: center;
+      padding: 40px;      
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .bottomBar{
+    display: block;
+    .copyright{
+      flex-basis: content;
+      left: 0;
+    }
+    .socialMedia{
+      ul{
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .bottomBar{
+    display: block;
+    .copyright{
+      flex-basis: content;
+      left: 0;      
+    }
+    .socialMedia{
+      ul{
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bottomBar{
+    .copyright{
+      left: -250px;
+    }
+  }
+}
+
+
+
