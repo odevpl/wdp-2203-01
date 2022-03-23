@@ -7,6 +7,9 @@
   :global(.container) > :global(.row) {
     height: 84px;
   }
+  
+  .wrapper {
+    align-items: center;
 
   .menu {
     display: flex;
@@ -44,8 +47,173 @@
         border-color: $menu-link-hover-border;
       }
 
+     
+
       &.active {
         border-color: $menu-link-active-border;
+      }
+    }
+  }
+  .dropdown {
+    display: none;
+  }
+
+  }
+}
+
+@media (max-width: 1200px) {
+  .root {
+    height: 130px;
+    .wrapper {
+      .menu {
+        a {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    :global(.container) > :global(.row) {
+      height: fit-content;
+    }
+    .wrapper {
+      flex-direction: column;
+      align-items: initial;
+      margin: 0 auto;
+      padding-left: 5rem;
+
+      .search {
+      order: 2;
+
+      form {
+        width: 552px;
+
+        div {
+          width: 50%;
+        }
+      }
+      }
+
+      .menu {
+        order: 1;
+        width: 100%;
+
+        ul {
+          margin: 0;
+        }
+
+        button {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    .wrapper {
+      padding: 0;
+
+      .menu {
+        a {
+          padding: 10px;
+        }
+      }
+
+      .search {
+        form {
+          width: 460px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 577px) {
+  .root {
+    .wrapper {
+      flex-direction: row;
+      position: relative;
+
+      .menu {
+        visibility: hidden;
+        position: absolute;
+        order: 2;
+        top: 0;
+        right: 2rem;
+        z-index: 111;
+
+        ul {
+          flex-direction: column;
+          padding-left: 20px;
+
+          li {
+            z-index: 1;
+
+            a {
+              width: 100%;
+            }
+          }
+        }
+
+        ul::before {
+          position: absolute;
+          content: ' ';
+          display: block;
+          width: 90px;
+          height: 100%;
+          background-color: $featureBox-bg;
+          box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+          z-index: 0;
+        }
+      }
+
+      .activeMenu {
+        visibility: visible;
+      }
+
+      .search {
+        order: 1;
+        padding-left: 0;
+        padding-right: 10px;
+
+        form {
+          width: 100%;
+        }
+      }
+
+      .dropdown {
+        display: block;
+        font-size: 1rem;
+        width: fit-content;
+        order: 2;
+        z-index: 111;
+        padding-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 324px) {
+  .root {
+    .wrapper {
+      .search {
+        width: 85%;
+
+        form {
+          button {
+            padding-left: 0;
+          }
+
+          svg {
+            transform: scale(0.8);
+          }
+        }
       }
     }
   }
