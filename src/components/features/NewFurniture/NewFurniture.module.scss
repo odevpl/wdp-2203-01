@@ -102,5 +102,46 @@
         }
       }
     }
+    .horizontalMenu svg {
+      font-size: 0px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .root .panelBar .menu {
+    text-align: start;
+  }
+
+  .root .panelBar .horizontalMenu svg {
+    font-size: 20px;
+  }
+  .horizontalMenu .dropdown {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    background-color: $newFeniture-navbar-bg;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .horizontalMenu:hover .dropdown {
+    display: block;
+  }
+
+  .root .panelBar .menu .dropdown li {
+    display: block;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .root .panelBar .menu ul li {
+    margin: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 360px) {
+    .root .panelBar .menu ul li {
+    margin: 0 0 0 5px;
   }
 }
