@@ -98,4 +98,17 @@ $topBar-link: $white;
 $topBar-link-hover: $orange;
 
 /*General variables*/
+
 $primary: $clear-sand;
+// animations
+
+$bg-transition: 0.25s;
+$text-transition: 0.25s;
+
+%animation {
+  transition-property: background-color, color;
+  transition-duration: $bg-transition, $text-transition;
+  transition-timing-function: ease-out;
+  &:hover {
+  }
+}

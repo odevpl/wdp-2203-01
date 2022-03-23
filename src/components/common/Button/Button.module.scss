@@ -4,6 +4,7 @@
 // }
 
 .main {
+  @extend %animation;
   background-color: $button-bg;
   color: $button-text;
   font-size: 16px;
@@ -27,6 +28,7 @@
 }
 
 .outline {
+  @extend %animation;
   display: inline-block;
   padding: 5px 10px;
   border: 1px solid $button-outline-border;
