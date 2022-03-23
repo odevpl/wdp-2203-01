@@ -38,10 +38,11 @@
     .icon {
       margin-right: 5px;
     }
-    .login, .register {
-      @media (max-width: 576px) {
-        display: none;
-      }
-    }
+  }
+}
+
+@media (max-width: 575px) {
+  .topMenu a span {
+    display: none;
   }
 }
