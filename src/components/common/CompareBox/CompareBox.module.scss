@@ -8,6 +8,7 @@
   cursor: pointer;
 
   &::before {
+    @extend %animation;
     position: absolute;
     content: "";
     display: table;
@@ -18,6 +19,7 @@
   }
 
   .icon {
+    @extend %animation;
     font-size: 48px;
     color: $compareBox-icon;
     position: absolute;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { getAllCompare } from './../../../redux/compareRedux';
 import styles from './CompareBar.module.scss';
@@ -20,6 +21,10 @@ const CompareBar = () => {
       )}
     </>
   );
+};
+
+CompareBar.propTypes = {
+  compare: PropTypes.array,
 };
 
 export default CompareBar;
