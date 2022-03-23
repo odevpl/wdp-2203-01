@@ -16,6 +16,7 @@ const ProductBox = ({
   promo,
   stars,
   image,
+  category,
   addToFavorites,
   removeFromFavorites,
   id,
@@ -70,7 +71,7 @@ const ProductBox = ({
             e.preventDefault();
             if (compare.length < 4 && compareActive === false) {
               addActiveClass({ id });
-              addToCompare({ id, name, price, image, stars });
+              addToCompare({ id, name, category, price, image, stars });
             }
           }}
         >
@@ -102,6 +103,7 @@ ProductBox.propTypes = {
   compare: PropTypes.array,
   compareActive: PropTypes.bool,
   addActiveClass: PropTypes.func,
+  category: PropTypes.string,
 };
 
 export default ProductBox;
