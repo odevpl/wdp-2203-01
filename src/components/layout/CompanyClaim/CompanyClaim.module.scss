@@ -6,6 +6,9 @@
   :global(.container) > :global(.row) {
     height: 145px;
   }
+  .elements :first-child {
+    @media (max-width: 576px) { order: 3; }
+  }
 
   .phoneNumber {
     p {
@@ -14,6 +17,10 @@
       line-height: 42px;
       color: $companyClaim-phone-text;
       font-weight: 500;
+
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
 
       .icon {
         font-size: 32px;
@@ -30,8 +37,13 @@
       display: inline-block;
       position: relative;
       color: $companyClaim-cartBox-text;
+      
+      @media (max-width: 576px) {
+        margin-right: 1.5rem;
+      }
 
       .cartIcon {
+        @extend %animation;
         background-color: $companyClaim-cartIcon-bg;
         width: 55px;
         height: 50px;
