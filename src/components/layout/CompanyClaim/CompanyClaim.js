@@ -14,7 +14,7 @@ const CompanyClaim = () => (
             <img src='/images/logo.png' alt='Bazar' />
           </a>
         </div>
-        <div className={`col text-right ${styles.cart}`}>
+        <div className={`col text-right col-md ${styles.cart}`}>
           <a href='#' className={styles.cartBox}>
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />

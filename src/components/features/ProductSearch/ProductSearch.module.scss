@@ -36,7 +36,7 @@
     }
 
     select:hover {
-      color: $primary;
+      color: $button-text-hover-bg;
     }
 
     select:focus {
@@ -46,6 +46,7 @@
 
   .searchField {
     display: flex;
+
     align-items: center;
     position: relative;
 
