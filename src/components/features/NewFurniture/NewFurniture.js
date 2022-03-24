@@ -40,7 +40,6 @@ class NewFurniture extends React.Component {
   render() {
     const { categories, products, mode } = this.props;
     const { activeCategory, activePage, fade } = this.state;
-
     let productsPerPage;
 
     switch (mode) {

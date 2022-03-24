@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import PropTypes from 'prop-types';
 
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 
 const MainLayout = ({ children, updateMode, mode }) => {
   function handlechangeSize() {
