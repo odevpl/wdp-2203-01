@@ -35,8 +35,17 @@ class NewFurniture extends React.Component {
   }
 
   render() {
+<<<<<<< HEAD
     const { categories, products, mode } = this.props;
     const { activeCategory, activePage, fade } = this.state;
+=======
+<<<<<<< HEAD
+    const { categories, products } = this.props;
+    const { activeCategory, activePage, fade } = this.state;
+=======
+    const { categories, products, mode } = this.props;
+    const { activeCategory, activePage } = this.state;
+>>>>>>> bdd2211 (RDW mode: mobile, destop,tablet)
     let productsPerPage;
 
     switch (mode) {
@@ -52,6 +61,10 @@ class NewFurniture extends React.Component {
       default:
         productsPerPage = 4;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 913d08c (RDW mode: mobile, destop,tablet)
+>>>>>>> bdd2211 (RDW mode: mobile, destop,tablet)
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);

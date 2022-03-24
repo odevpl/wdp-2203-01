@@ -631,12 +631,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-<<<<<<< HEAD
       favorites: false,
       myStars: 0,
-=======
       isFavourite: true,
->>>>>>> 530e37d (fix ProductBox)
       compareActive: false,
     },
     {
@@ -1094,6 +1091,7 @@ const initialState = {
     products: [],
   },
   compare: [],
+<<<<<<< HEAD
   feedbacks: [
     {
       id: 'client1',
@@ -1117,6 +1115,9 @@ const initialState = {
       image: 'src=../../images/feedback/client3.jpg',
     },
   ],
+=======
+<<<<<<< HEAD
+>>>>>>> 283db43 (RDW mode: mobile, destop,tablet)
   brands: [
     {
       id: 'brand1',
@@ -1179,6 +1180,7 @@ const initialState = {
     },
   ],
   mode: ' ',
+
 };
 
 export default initialState;
