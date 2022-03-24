@@ -30,7 +30,7 @@
       font-size: 14px;
     }
     select:hover {
-      color: $primary;
+      color: $button-text-hover-bg;
     }
     select:focus {
       outline: none;
@@ -38,6 +38,7 @@
   }
   .searchField {
     display: flex;
+
     align-items: center;
     position: relative;
     input {
