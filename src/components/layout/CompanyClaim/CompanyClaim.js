@@ -7,7 +7,11 @@ import { faMobileAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons
 const CompanyClaim = () => (
   <div className={styles.root}>
     <div className='container'>
+<<<<<<< HEAD
       <div className={`row align-items-center ${styles.elements}`}>
+=======
+    <div className={`row align-items-center ${styles.elements}`}>
+>>>>>>> 5d2b227 (RWD mode)
         <div className={`col-12 text-center col-md text-md-left ${styles.phoneNumber}`}>
           <p>
             <FontAwesomeIcon className={styles.icon} icon={faMobileAlt} /> 2300 - 3560 -
