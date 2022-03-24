@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './BrandBox.module.scss';
 
@@ -9,5 +10,9 @@ const BrandBox = brand => (
     </div>
   </div>
 );
+
+BrandBox.propTypes = {
+  brand: PropTypes.array,
+};
 
 export default BrandBox;
