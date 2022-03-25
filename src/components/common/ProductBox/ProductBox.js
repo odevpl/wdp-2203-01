@@ -16,10 +16,15 @@ const ProductBox = ({
   promo,
   stars,
   image,
+  category,
   addToFavorites,
   removeFromFavorites,
   id,
   favorites,
+  addToCompare,
+  compare,
+  compareActive,
+  addActiveClass,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -59,7 +64,17 @@ const ProductBox = ({
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button
+          className={compareActive ? styles.active : styles.outlines}
+          variant='outline'
+          onClick={e => {
+            e.preventDefault();
+            if (compare.length < 4 && compareActive === false) {
+              addActiveClass({ id });
+              addToCompare({ id, name, category, price, image, stars });
+            }
+          }}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -84,6 +99,11 @@ ProductBox.propTypes = {
   addToFavorites: PropTypes.func,
   removeFromFavorites: PropTypes.func,
   id: PropTypes.string,
+  addToCompare: PropTypes.func,
+  compare: PropTypes.array,
+  compareActive: PropTypes.bool,
+  addActiveClass: PropTypes.func,
+  category: PropTypes.string,
 };
 
 export default ProductBox;

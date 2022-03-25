@@ -54,6 +54,7 @@ $productBox-border-before: $orange;
 $productBox-price-text: $white;
 $productBox-price-bg: $black;
 $productBox-price-hover-bg: $orange;
+$productBox-compare-active: $orange;
 
 $newFeniture-border: $gray225;
 $newFeniture-header-text: $orange;
@@ -103,6 +104,9 @@ $topBar-bg: $grayMedium;
 $topBar-link: $white;
 $topBar-link-hover: $orange;
 
+$compareBar-bg: $grayMedium;
+$compareBox-icon: $white;
+$compareBox-hover-bg: $black;
 $swipeable-icon: $grayMedium;
 $swipeable-hover: $orange;
 
@@ -113,10 +117,11 @@ $primary: $clear-sand;
 
 $bg-transition: 0.25s;
 $text-transition: 0.25s;
+$opacity-transition: 0.25s;
 
 %animation {
-  transition-property: background-color, color;
-  transition-duration: $bg-transition, $text-transition;
+  transition-property: background-color, color, opacity;
+  transition-duration: $bg-transition, $text-transition, $opacity-transition;
   transition-timing-function: ease-out;
   &:hover {
   }

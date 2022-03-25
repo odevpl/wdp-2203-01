@@ -98,7 +98,11 @@
   .favorites {
     background-color: $productBox-border-before;
   }
-  
+
+  .active {
+    background-color: $productBox-compare-active;
+  }
+
   .priceWraper {
     display: flex;
     flex-direction: row;
