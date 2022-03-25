@@ -54,7 +54,6 @@ const Footer = ({ children }) => (
               </ul>
             </div>
           </div>
-          <div className='w-100 d-md-none'></div>
           <div className='col'>
             <div className={styles.menuWrapper}>
               <h6>Information</h6>
@@ -99,8 +98,8 @@ const Footer = ({ children }) => (
     </div>
     <div className={styles.bottomBar}>
       <div className='container'>
+        <div className='w-100 text-center d-md-none'></div>
         <div className='row align-items-center'>
-          <div className='col'></div>
           <div className={'col text-center ' + styles.copyright}>
             <p>©Copyright 2016 Bazar | All Rights Reserved</p>
           </div>

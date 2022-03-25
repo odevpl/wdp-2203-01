@@ -4,6 +4,7 @@
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
+    text-align: center;
 
     .menuWrapper {
       h6 {
@@ -54,6 +55,7 @@
         color: $footer-claim-text;
         font-size: 14px;
         line-height: 26px;
+        text-align: center;
       }
     }
 
@@ -106,25 +108,12 @@
   }
 }
 
-@media (max-width: 426px) {
-  .bottomBar{
-    display: block;
-    .copyright{
-      flex-basis: content;
-      left: 0;      
-    }
-    .socialMedia{
-      ul{
-        text-align: center;
-      }
-    }
-  }
-}
-
 @media (max-width: 768px) {
   .bottomBar{
     .copyright{
-      left: -250px;
+      width: 50%;
+      position: relative;
+      right: 24px;
     }
   }
 }
