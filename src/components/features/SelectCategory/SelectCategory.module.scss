@@ -1,0 +1,44 @@
+@import "../../../styles/settings.scss";
+
+
+.horizontalMenu {
+  font-size: 14px;
+  z-index: 1;
+  padding: 5px 30px 5px 35px;
+  position: relative;
+}
+
+.dropdown {
+  width: 100%;
+  position: absolute;
+  display: none;
+  background-color: $productSearch-background;
+  left: 0;
+  border: 1px solid $productSearch-border;
+  padding: 0;
+}
+
+.dropdown li {
+  width: 100%;
+  padding: 5px 30px 5px 35px;
+}
+
+.horizontalMenu:hover li {
+  color: $primary;
+  cursor: pointer;
+}
+
+
+.horizontalMenu li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li:hover {
+  background-color: $productSearch-hover-background;
+  color: $productSearch-hover-text;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}

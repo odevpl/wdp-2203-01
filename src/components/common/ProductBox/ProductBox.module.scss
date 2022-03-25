@@ -63,13 +63,6 @@
       line-height: 24px;
       letter-spacing: 1px;
     }
-
-    .stars {
-      a {
-        text-decoration: none;
-        color: $productBox-stars-text;
-      }
-    }
   }
 
   .line {
@@ -83,7 +76,7 @@
       bottom: -1px;
       left: 50%;
       width: 30px;
-      border-bottom: 4px solid $productBox-border-before;
+      border-bottom: 4px solid $productSearch-border;
       transform: translateX(-50%);
     }
   }
@@ -98,7 +91,11 @@
   .favorites {
     background-color: $productBox-border-before;
   }
-  
+
+  .active {
+    background-color: $productBox-compare-active;
+  }
+
   .priceWraper {
     display: flex;
     flex-direction: row;

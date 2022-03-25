@@ -11,6 +11,8 @@ $base-padding: 24px;
 $orange: #d58e32;
 $black: #2a2a2a; //use it too as #292929 and rgb(42, 42, 42)
 $white: #ffffff;
+$blue: #3297FD;
+
 
 $grayLight: #b6b6b6;
 $grayMedium: #434343;
@@ -47,6 +49,7 @@ $productBox-sale-bg: $black;
 $productBox-sale-text: $white;
 $productBox-header: $orange;
 $productBox-stars-text: $black;
+$productBox-stars-select: $orange;
 $productBox-border: $black;
 $productBox-border-before: $orange;
 $productBox-favourite-active: $orange;
@@ -54,6 +57,7 @@ $productBox-compare-active: $orange;
 $productBox-price-text: $white;
 $productBox-price-bg: $black;
 $productBox-price-hover-bg: $orange;
+$productBox-compare-active: $orange;
 
 $newFeniture-border: $gray225;
 $newFeniture-header-text: $orange;
@@ -63,11 +67,15 @@ $newFeniture-menu-bg: $white;
 $newFeniture-link-bg: $gray225;
 $newFeniture-hover-border: $orange;
 $newFeniture-hover-bg: $orange;
+$newFeniture-navbar-bg: $white;
 
 $productSearch-border: $black;
 $productSearch-text: $black;
 $productSearch-icon: $orange;
 $productSearch-placeholder: $black;
+$productSearch-background: $white;
+$productSearch-hover-background: $blue;
+$productSearch-hover-text: $white;
 
 $companyClaim-bg: $grayDark;
 $companyClaim-phone-text: $gray225;
@@ -99,5 +107,25 @@ $topBar-bg: $grayMedium;
 $topBar-link: $white;
 $topBar-link-hover: $orange;
 
+$compareBar-bg: $grayMedium;
+$compareBox-icon: $white;
+$compareBox-hover-bg: $black;
+$swipeable-icon: $grayMedium;
+$swipeable-hover: $orange;
+
 /*General variables*/
+
 $primary: $clear-sand;
+// animations
+
+$bg-transition: 0.25s;
+$text-transition: 0.25s;
+$opacity-transition: 0.25s;
+
+%animation {
+  transition-property: background-color, color, opacity;
+  transition-duration: $bg-transition, $text-transition, $opacity-transition;
+  transition-timing-function: ease-out;
+  &:hover {
+  }
+}
