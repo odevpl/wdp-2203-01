@@ -1,0 +1,30 @@
+@import "../../../styles/settings.scss";
+
+.iconWrapper {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  height: 0;
+  position: sticky;  
+  top: calc((100vh - 405px) / 2);
+  transform: translateY(50%);
+
+  .icon {
+    color: $swipeable-icon;
+    margin-top: 15vh;
+    font-size: 60px;
+    cursor: pointer;
+    
+    &:hover {
+      color: $swipeable-hover;
+    }
+
+    &:first-of-type {
+      margin-left: 5%;
+    }
+
+    &:last-of-type {
+      margin-right: 5%;
+    }
+  }
+}
