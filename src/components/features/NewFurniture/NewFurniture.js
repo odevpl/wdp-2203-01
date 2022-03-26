@@ -99,21 +99,21 @@ class NewFurniture extends React.Component {
                 </div>
                 <div className={'col ' + styles.menu}>
                   <ul>
-                    <li className={styles.horizontalMenu}>
-                      <FontAwesomeIcon className={styles.icon} icon={faBars} />
-                      <ul className={styles.dropdown}>
-                        {categories.map(item => (
-                          <li key={item.id}>
-                            <a
-                              className={
-                                item.id === activeCategory ? styles.active : undefined
-                              }
-                              onClick={() => this.handleCategoryChange(item.id)}
-                            >
-                              {item.name}
-                            </a>
-                          </li>
-                        ))}
+                  <li className={styles.horizontalMenu}>
+                    <FontAwesomeIcon className={styles.icon} icon={faBars} />
+                    <ul className={styles.dropdown}>
+                      {categories.map(item => (
+                        <li key={item.id}>
+                          <a
+                            className={
+                              item.id === activeCategory ? styles.active : undefined
+                            }
+                            onClick={() => this.handleCategoryChange(item.id)}
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
                       </ul>
                     </li>
                   </ul>

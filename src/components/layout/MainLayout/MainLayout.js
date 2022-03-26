@@ -1,30 +1,34 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
 
 const MainLayout = ({ children, updateMode, mode }) => {
-  function handlechangeSize() {
-    let newMode;
-    if (window.innerWidth < 576) {
-      newMode = 'mobile';
-    } else if (window.innerWidth >= 992) {
-      newMode = 'desktop';
-    } else newMode = 'tablet';
+  const dispatch = useDispatch();
 
-    if (newMode !== mode) {
-      updateMode(newMode);
+  useLayoutEffect(() => {
+    const mobile = 'mobile';
+    const tablet = 'tablet';
+    const desktop = 'desktop';
+
+    function handleChangeSize() {
+      let newMode;
+      if (window.screen.width <= 480) {
+        newMode = mobile;
+      } else if (window.screen.width >= 481 && window.screen.width <= 820) {
+        newMode = tablet;
+      } else if (window.screen.width >= 821) {
+        newMode = desktop;
+      }
+      dispatch(updateMode(newMode));
     }
-  }
-  handlechangeSize();
+    handleChangeSize();
 
-  useEffect(() => {
-    window.addEventListener('resize', handlechangeSize);
-    return () => {
-      window.removeEventListener('resize', handlechangeSize);
-    };
-  });
+    window.addEventListener('resize', handleChangeSize);
+    return () => window.removeEventListener('resize', handleChangeSize);
+  }, [dispatch, mode, updateMode]);
 
   return (
     <div>
