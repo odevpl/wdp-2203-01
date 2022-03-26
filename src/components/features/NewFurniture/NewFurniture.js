@@ -5,14 +5,12 @@ import Swipeable from '../../common/Swipeable/Swipeable';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
     fade: false,
   };
-
   handlePageChange(newPage) {
     this.setState({ fade: true });
 
@@ -24,7 +22,6 @@ class NewFurniture extends React.Component {
       250
     );
   }
-
   handleCategoryChange(newCategory) {
     this.setState({ fade: true });
 
@@ -87,7 +84,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <Swipeable leftAction={moveLeft} rightAction={moveRight}>
         <div className={styles.root}>
@@ -140,7 +136,6 @@ class NewFurniture extends React.Component {
     );
   }
 }
-
 NewFurniture.propTypes = {
   children: PropTypes.node,
   productsPage: PropTypes.string,
@@ -163,10 +158,8 @@ NewFurniture.propTypes = {
   ),
   mode: PropTypes.string,
 };
-
 NewFurniture.defaultProps = {
   categories: [],
   products: [],
 };
-
 export default NewFurniture;
