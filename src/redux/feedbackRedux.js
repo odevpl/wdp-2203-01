@@ -1,5 +1,6 @@
 //selectors
-export const getAllFeedback = ({ feedback }) => feedback;
+export const getFeedback = ({ feedbacks }) =>
+  feedbacks.find(feedback => feedback.id === 'client1');
 
 // actions
 //const createActionName = actionName => `app/feedback/${actionName}`;

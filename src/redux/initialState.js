@@ -324,7 +324,7 @@ const initialState = {
     products: [],
   },
   compare: [],
-  feedback: [
+  feedbacks: [
     {
       id: 'client1',
       name: 'John Doe',
