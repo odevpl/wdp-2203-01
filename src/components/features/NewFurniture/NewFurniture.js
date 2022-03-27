@@ -12,6 +12,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     fade: false,
+    showPopup: false,
   };
 
   handlePageChange(newPage) {
@@ -38,9 +39,17 @@ class NewFurniture extends React.Component {
     );
   }
 
+  handleShowPopup() {
+    this.setState({ showPopup: true });
+  }
+
+  handleClosePopup() {
+    this.setState({ showPopup: false });
+  }
+
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage, fade } = this.state;
+    const { activeCategory, activePage, fade, showPopup } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -116,15 +125,18 @@ class NewFurniture extends React.Component {
                     .slice(activePage * 8, (activePage + 1) * 8)
                     .map(item => (
                       <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                        <ProductBox {...item} />
+                        <ProductBox
+                          {...item}
+                          showPopup={() => this.handleShowPopup()}
+                        />
                       </div>
                     ))}
                 </div>
               </div>
             </div>
           </div>
-          <ProductPopup />
         </Swipeable>
+        {showPopup && <ProductPopup close={() => this.handleClosePopup()} />}
       </>
     );
   }
