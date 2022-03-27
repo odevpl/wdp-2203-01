@@ -24,6 +24,7 @@ const ProductBox = ({
   compare,
   compareActive,
   addActiveClass,
+  showPopup,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -32,7 +33,9 @@ const ProductBox = ({
       </Link>
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
+        <Button variant='small' onClick={showPopup}>
+          Quick View
+        </Button>
         <Button variant='small'>
           <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
         </Button>
@@ -98,6 +101,7 @@ ProductBox.propTypes = {
   compareActive: PropTypes.bool,
   addActiveClass: PropTypes.func,
   category: PropTypes.string,
+  showPopup: PropTypes.func,
 };
 
 export default ProductBox;

@@ -1,7 +1,25 @@
 @import "../../../styles/settings.scss";
 
 .root {
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+
   .popup {
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid $productBox-root-border;
+
+    .icon {
+      cursor: pointer;
+
+      &:hover {
+        color: $orange;
+      }
+    }
 
     .head {
       position: relative;
@@ -29,6 +47,7 @@
     .body {
       .prodImage {
         height: 250px;
+        background-color: green;
       }
 
       .prodDetal {
@@ -36,6 +55,10 @@
 
         ul {
           padding: 0;
+
+          li span {
+            font-weight: 700;
+          }
         }
       }
     }
