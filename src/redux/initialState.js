@@ -900,6 +900,7 @@ const initialState = {
     products: [],
   },
   compare: [],
+  mode: ' ',
 };
 
 export default initialState;
