@@ -101,10 +101,7 @@
       }
     }
     .horizontalMenu svg {
-<<<<<<< HEAD
       margin-left: 10px;
-=======
->>>>>>> 9b42573 (Fix RWD bug in New Furniture section)
       margin-bottom: 5px;
       font-size: 0px;
     }
@@ -211,7 +208,12 @@
   }
 }
 
-@media (max-width: 741px) {
+
+
+
+
+@media (max-width: 576px) {
+
   .root {
     .panelBar {
       position: relative;
@@ -222,6 +224,9 @@
       }
     }
   }
+
+@media (max-width: 741px) {
+
   .root .panelBar .menu {
     text-align: end;
     padding-right: 25%;
@@ -283,5 +288,6 @@
     .root .panelBar .dots {
       display: none;
   }
+}
 }
 
