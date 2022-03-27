@@ -13,7 +13,7 @@ const Homepage = () => (
     <FeatureBoxes />
     <NewFurniture />
     <CompareBar />
-    <BrandsBar />
+
   </div>
 );
 
