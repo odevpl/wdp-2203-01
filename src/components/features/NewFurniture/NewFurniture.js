@@ -35,17 +35,10 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-<<<<<<< HEAD
+
     const { categories, products, mode } = this.props;
     const { activeCategory, activePage, fade } = this.state;
-=======
-<<<<<<< HEAD
-    const { categories, products } = this.props;
-    const { activeCategory, activePage, fade } = this.state;
-=======
-    const { categories, products, mode } = this.props;
-    const { activeCategory, activePage } = this.state;
->>>>>>> bdd2211 (RDW mode: mobile, destop,tablet)
+
     let productsPerPage;
 
     switch (mode) {
@@ -61,10 +54,7 @@ class NewFurniture extends React.Component {
       default:
         productsPerPage = 4;
     }
-<<<<<<< HEAD
-=======
->>>>>>> 913d08c (RDW mode: mobile, destop,tablet)
->>>>>>> bdd2211 (RDW mode: mobile, destop,tablet)
+
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);
@@ -131,20 +121,20 @@ class NewFurniture extends React.Component {
                   <ul>{dots}</ul>
                 </div>
               </div>
-              </div>
             </div>
           </div>
-          <div className={fade ? styles.noVisability : styles.visability}>
-            <div className='row'>
-              {categoryProducts
-                .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
-                .map(item => (
-                  <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
-            </div>
+        <div className={fade ? styles.noVisability : styles.visability}>
+          <div className='row'>
+            {categoryProducts
+              .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
+              .map(item => (
+                <div key={item.id} className='col-lg-3 col-sm-6'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
+        </div>
+        </div>
       </Swipeable>
     );
   }
