@@ -4,7 +4,6 @@ import {
   faShoppingBasket,
   faExchangeAlt,
   faEye,
-  faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import styles from './Promoted.module.scss';
