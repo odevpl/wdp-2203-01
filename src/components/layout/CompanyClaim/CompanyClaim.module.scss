@@ -10,10 +10,6 @@
     @media (max-width: 576px) { order: 3; }
   }
 
-  .elements :first-child {
-    @media (max-width: 576px) { order: 3; }
-  }
-
   .phoneNumber {
     p {
       margin: 0;
@@ -22,13 +18,9 @@
       color: $companyClaim-phone-text;
       font-weight: 500;
 
-      @media (max-width: 576px) {
-        font-size: 14px;
-      }
-
       .icon {
         font-size: 32px;
-        color: $companyClaim-icon;
+        color: orange;
         vertical-align: middle;
         margin-top: -3px;
         margin-right: 0.8rem;
@@ -36,19 +28,21 @@
     }
   }
 
+  .logo img {
+    width: auto;
+  }
+
   .cart {
+    .phoneNumber {
+      display: none;
+    }
     .cartBox {
       display: inline-block;
       position: relative;
-      color: $companyClaim-cartBox-text;
-      
-      @media (max-width: 576px) {
-        margin-right: 1.5rem;
-      }
-
-      @media (max-width: 576px) {
-        margin-right: 1.5rem;
-      }
+      color: $companyClaim-cartIcon-bg;
+      border: none;
+      background-color: transparent;
+      transform: translate(-60%, 0%);
 
       .cartIcon {
         @extend %animation;
@@ -60,39 +54,162 @@
         align-items: center;
         justify-content: center;
         font-size: 20px;
-
+        
         .icon {
           margin-right: 5px;
+          color: $companyClaim-cartBox-text;
         }
       }
 
       .cartCounter {
-        min-width: 28px;
+        width: 100%;
+        padding-left: 10px;
         height: 27px;
         border-radius: 14px;
-        background-color: $companyClaim-cartCounter-bg;
+        background-color: $companyClaim-bg;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         font-size: 14px;
         color: $companyClaim-cartCounter-text;
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translate(70%, -50%);
-      }
-
-      .cartCounter p {
-        margin: 0;
-        padding: 0 5px 0 5px;
-        max-width: 50px;
-      }
+        transform: translate(75%, -50%);
+        }
+      
 
       &:hover {
         .cartIcon {
-          background-color: lighten($companyClaim-cartCounter-hover-bg, 10%);
+          background-color: lighten($companyClaim-cartIcon-bg,  10%);
+          
         }
       }
     }
   }
+  .image {
+    width: 190px;
+  }
 }
+
+@media (min-width: 390px) and (max-width: 767px) {
+  .root {
+    .phoneNumber {
+      display: none;
+    }
+
+    .cart {
+      .cartBox {
+        transform: translate(-50%, -80%);
+      }
+
+      .phoneNumber {
+        position: absolute;
+        display: flex;
+        text-align: right;
+        align-items: right;
+        right: 0;
+        margin-right: 3px;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .image {
+      width: 80px;
+    }
+  }
+}
+@media (min-width: 289px) and (max-width: 390px) {
+  .root {
+    .phoneNumber {
+      position: absolute;
+      display: flex;
+      text-align: right;
+      align-items: right;
+      left: 0;
+      margin-left: 70px;
+      transform: translate(10%, 100%);
+      p {
+        font-size: 14px;
+      }
+    }
+    .logo{
+      transform: translate(-5%, -12%);
+      padding: 0;
+      margin: 0;
+
+    }
+    .cart {
+      .cartBox {
+        transform: translate(-50%, -100%);
+      }
+
+      .phoneNumber {
+        display:none;
+        }
+      }
+    }
+  }
+@media (min-width: 281px) and (max-width: 288px) {
+  .root {
+    .phoneNumber {
+      position: absolute;
+      display: flex;
+      text-align: right;
+      align-items: right;
+      left: 0;
+      margin-left: 50px;
+      transform: translate(20%, 100%);
+      p {
+        font-size: 12px;
+      }
+    }
+    .logo{
+      transform: translate(0, -20%);
+      padding: 0;
+      margin: 0;
+
+    }
+    .cart {
+      .cartBox {
+        transform: translate(-45%, -100%);
+      }
+
+      .phoneNumber {
+        display:none;
+        }
+      }
+    }
+  }
+  @media (max-width: 280px) {
+    .root {
+      .phoneNumber {
+        position: absolute;
+        display: flex;
+        text-align: right;
+        align-items: right;
+        left: 0;
+        margin-left: 80px;
+        transform: translate(0, 100%);
+        p {
+          font-size: 14px;
+        }
+      }
+      .logo{
+        transform: translate(-18%, 10%);
+  
+      }
+      .cart {
+        .cartBox {
+          transform: translate(-50%, -160%);
+        }
+  
+        .phoneNumber {
+          display:none;
+          }
+        }
+      }
+    }
+    
+  
