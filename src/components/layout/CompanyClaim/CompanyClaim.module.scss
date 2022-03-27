@@ -92,7 +92,7 @@
   }
 }
 
-@media (min-width: 390px) and (max-width: 767px) {
+@media (min-width: 377px) and (max-width: 767px) {
   .root {
     .phoneNumber {
       display: none;
@@ -105,6 +105,7 @@
 
       .phoneNumber {
         position: absolute;
+        padding: 0;
         display: flex;
         text-align: right;
         align-items: right;
@@ -120,16 +121,18 @@
     }
   }
 }
-@media (min-width: 289px) and (max-width: 390px) {
+
+@media (min-width: 359px) and (max-width: 377px) {
   .root {
     .phoneNumber {
       position: absolute;
+      padding: 0;
       display: flex;
       text-align: right;
       align-items: right;
       left: 0;
-      margin-left: 70px;
-      transform: translate(10%, 100%);
+      margin-left: 60px;
+      transform: translate(35%, 100%);
       p {
         font-size: 14px;
       }
@@ -142,7 +145,7 @@
     }
     .cart {
       .cartBox {
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -80%);
       }
 
       .phoneNumber {
@@ -151,29 +154,34 @@
       }
     }
   }
-@media (min-width: 281px) and (max-width: 288px) {
+
+@media (min-width: 330px) and (max-width: 359px) {
+  #rowCompanyClaim {
+    align-items: center;
+  }
   .root {
     .phoneNumber {
       position: absolute;
+      padding: 0;
       display: flex;
       text-align: right;
       align-items: right;
       left: 0;
-      margin-left: 50px;
-      transform: translate(20%, 100%);
+      margin-left: 40px;
+      transform: translate(35%, 120%);
       p {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
     .logo{
-      transform: translate(0, -20%);
+      transform: translate(-5%, -12%);
       padding: 0;
       margin: 0;
 
     }
     .cart {
       .cartBox {
-        transform: translate(-45%, -100%);
+        transform: translate(-50%, -80%);
       }
 
       .phoneNumber {
@@ -182,27 +190,31 @@
       }
     }
   }
-  @media (max-width: 280px) {
+
+  @media (min-width: 300px) and (max-width: 330px) {
+    #rowCompanyClaim {
+      align-items: center;
+    }
     .root {
       .phoneNumber {
         position: absolute;
-        display: flex;
+        padding: 0;
+        display: flex-end;
         text-align: right;
         align-items: right;
         left: 0;
-        margin-left: 80px;
-        transform: translate(0, 100%);
+        transform: translate(20%, 100%);
         p {
           font-size: 14px;
         }
       }
       .logo{
-        transform: translate(-18%, 10%);
+        transform: translate(0%, -20%);
   
       }
       .cart {
         .cartBox {
-          transform: translate(-50%, -160%);
+          transform: translate(-50%, -80%);
         }
   
         .phoneNumber {
@@ -211,5 +223,7 @@
         }
       }
     }
+
+
     
   
