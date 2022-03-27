@@ -1,0 +1,43 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .popup {
+
+    .head {
+      position: relative;
+
+      h3 {
+        position: relative;
+        color: $newFeniture-header-text;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 38px;
+        margin: 0;
+        letter-spacing: 1px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 38px;
+          left: 0;
+          width: 45px;
+          border-bottom: 4px solid $newFeniture-header-border;
+        }
+      }
+    }
+
+    .body {
+      .prodImage {
+        height: 250px;
+      }
+
+      .prodDetal {
+        height: 250px;
+
+        ul {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
