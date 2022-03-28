@@ -101,7 +101,6 @@ const ProductBox = ({
           image={image}
           stars={stars}
           myStars={myStars}
-          id={id}
         />
       )}
     </div>

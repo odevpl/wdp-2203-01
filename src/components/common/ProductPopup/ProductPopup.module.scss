@@ -6,7 +6,8 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(51,51,51,0.7);
+  background: $productPopup-overlay;
+  opacity: 0.8;
   z-index: 19;
 }
 
@@ -17,18 +18,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  display: block;
 
   .popup {
     margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid $productBox-root-border;
+    background-color: $productPopup-bg;
+    border: 1px solid $productPopup-border;
 
     .icon {
+      @extend %animation;
       cursor: pointer;
 
       &:hover {
-        color: $orange;
+        color: $productPopup-hover;
       }
     }
 
@@ -38,7 +39,7 @@
 
       h3 {
         position: relative;
-        color: $newFeniture-header-text;
+        color: $productPopup-header-text;
         text-transform: uppercase;
         font-size: 20px;
         line-height: 38px;
@@ -49,9 +50,8 @@
           content: "";
           position: absolute;
           top: 38px;
-          left: 0;
           width: 45px;
-          border-bottom: 4px solid $newFeniture-header-border;
+          border-bottom: 4px solid $productPopup-header-border;
         }
       }
     }
@@ -66,14 +66,17 @@
         img {
           width: 250px;
           height: 250px;
+          display: block;
           object-fit: cover;
+          margin-left: auto;
+          margin-right: auto;
         }
         .sale {
           position: absolute;
           top: -30px;
           left: 50%;
           transform: translateX(-50%);
-          background-color: $productBox-sale-bg;
+          background-color: $productPopup-sale-bg;
           border-radius: 50%;
           color: $productBox-sale-text;
           padding: 30px 15px 5px 15px;
@@ -92,6 +95,10 @@
 
           li span {
             font-weight: 700;
+          }
+
+          li .myRate {
+            color: $productPopup-myRate;
           }
         }
       }
