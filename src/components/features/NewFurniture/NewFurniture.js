@@ -5,14 +5,12 @@ import Swipeable from '../../common/Swipeable/Swipeable';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import ProductPopup from '../../common/ProductPopup/ProductPopup';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
     fade: false,
-    showPopup: false,
   };
 
   handlePageChange(newPage) {
@@ -39,17 +37,9 @@ class NewFurniture extends React.Component {
     );
   }
 
-  handleShowPopup() {
-    this.setState({ showPopup: true });
-  }
-
-  handleClosePopup() {
-    this.setState({ showPopup: false });
-  }
-
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage, fade, showPopup } = this.state;
+    const { activeCategory, activePage, fade } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
@@ -125,10 +115,7 @@ class NewFurniture extends React.Component {
                     .slice(activePage * 8, (activePage + 1) * 8)
                     .map(item => (
                       <div key={item.id} className='col-12 col-md-6 col-lg-3'>
-                        <ProductBox
-                          {...item}
-                          showPopup={() => this.handleShowPopup()}
-                        />
+                        <ProductBox {...item} />
                       </div>
                     ))}
                 </div>
@@ -136,7 +123,6 @@ class NewFurniture extends React.Component {
             </div>
           </div>
         </Swipeable>
-        {showPopup && <ProductPopup close={() => this.handleClosePopup()} />}
       </>
     );
   }
