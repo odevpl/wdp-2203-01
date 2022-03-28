@@ -27,6 +27,7 @@ export const createAction_removeFavorites = payload => ({
 export const changeAmountOfStars = payload => ({
   payload,
   type: CHANGE_AMOUNT_OF_STARS,
+});
 export const addActiveClass = payload => ({
   payload,
   type: ADD_ACTIVE_CLASS,
@@ -57,6 +58,9 @@ export default function reducer(statePart = [], action = {}) {
       return statePart.map(product => {
         if (product.id === action.payload.id) {
           product.myStars = action.payload.amountOfStar;
+        }
+        return product;
+      });
     case ADD_ACTIVE_CLASS:
       return statePart.map(product => {
         if (product.id === action.payload.id) {
