@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const ProductPopup = ({
-  id,
   close,
   name,
   price,
@@ -16,8 +15,24 @@ const ProductPopup = ({
   stars,
   myStars,
 }) => {
-  console.log('stars: ', stars);
-  console.log('myStars: ', myStars);
+  const rating = [];
+  for (let i = 0; i < stars; i++) {
+    rating.push(
+      <FontAwesomeIcon key={i} icon={faStar}>
+        {i} stars
+      </FontAwesomeIcon>
+    );
+  }
+
+  const myRating = [];
+  for (let i = 0; i < myStars; i++) {
+    myRating.push(
+      <FontAwesomeIcon key={i} className={styles.myRate} icon={faStar}>
+        {i} stars
+      </FontAwesomeIcon>
+    );
+  }
+
   return (
     <>
       <div className={styles.overlay}></div>
@@ -26,11 +41,16 @@ const ProductPopup = ({
           <div className={'col-md-8 ' + styles.popup}>
             <div
               className={
-                'd-flex justify-content-between align-items-center p-4 ' + styles.head
+                'col-auto d-flex justify-content-between align-items-center p-4 ' +
+                styles.head
               }
             >
-              <FontAwesomeIcon icon={faTimes} className={styles.icon} onClick={close} />
-              <h3>{name}</h3>
+              <FontAwesomeIcon
+                icon={faTimes}
+                className={'col-auto ' + styles.icon}
+                onClick={close}
+              />
+              <h3 className='col-auto text-right'>{name}</h3>
             </div>
             <div className={'d-flex justify-content-around pb-4 ' + styles.body}>
               <div className={'col-md-5 ' + styles.prodImage}>
@@ -49,9 +69,7 @@ const ProductPopup = ({
                   </li>
                   <li>
                     <span>Rating: </span>
-                    {myStars > stars && (
-                      <FontAwesomeIcon icon={faStar}>{myStars} stars</FontAwesomeIcon>
-                    )}
+                    {myStars ? <>{myRating}</> : <>{rating}</>}
                   </li>
                   <li>
                     <span>Category: </span>
@@ -68,7 +86,6 @@ const ProductPopup = ({
 };
 
 ProductPopup.propTypes = {
-  id: PropTypes.string,
   close: PropTypes.func,
   name: PropTypes.string,
   price: PropTypes.number,
