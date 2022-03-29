@@ -79,17 +79,24 @@
   position: absolute;
   top: 10%;
   left: 27%;
-  line-height: 1.2;
-  text-align: center;
+  line-height: 0.7;
+  text-align: left;
 
   p {
     font-size: 36px;
-    color: $promotion-wrapper-right-p
+    color: $promotion-wrapper-right-p;
+  
 
     span {
       font-weight: 700;
     }
+    .spanSecond {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
   }
+
+
 
   p:last-child {
     color: $promotion-last-child-right-text;
@@ -100,23 +107,25 @@
 .wrapperRightDown {
   position: absolute;
   top: 10%;
-  left: 48%;
-  line-height: 1.2;
+  left: 51%;
+  line-height: 0.7;
   text-align: center;
 
   p {
-    font-size: 32px;
+    margin-top: 40px;
+    font-size: 24px;
     color: $promotion-wrapper-right-down-p;
 
     span {
       font-weight: 700;
-    }
+        }
   }
-
+  
   p:last-child {
+    margin-top: 10px;
     color: $promotion-wrapper-right-down-lastchild;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 16px;
   }
 }
 

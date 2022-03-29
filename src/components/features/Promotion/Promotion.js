@@ -33,7 +33,7 @@ const Promotions = () => {
                   <div className={styles.wrapperRightUp}>
                     <p>
                       <span>OFFICE</span> CHAIR <br />
-                      COLLECTION
+                      <span className={styles.spanSecond}>COLLECTION</span>
                     </p>
                     <p>$200.00</p>
                   </div>
@@ -54,7 +54,7 @@ const Promotions = () => {
                     <p>
                       <span>SPECIAL</span> COLLECTION
                     </p>
-                    <p>SAVE UP 45% OF FURNITURE</p>
+                    <p className={styles.secondLine}>SAVE UP 45% OF FURNITURE</p>
                   </div>
                 </div>
               </div>
