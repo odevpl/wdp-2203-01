@@ -21,6 +21,7 @@ const initialState = {
       compareActive: false,
       isFavourite: true,
       isCompare: true,
+      compareActive: true,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -43,11 +44,12 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-      favorites: false,
+      favorites: true,
       myStars: 0,
       compareActive: false,
       isFavourite: false,
       isCompare: true,
+      compareActive: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -58,15 +60,12 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-<<<<<<< HEAD
       favorites: true,
       myStars: 0,
       compareActive: false,
       isFavourite: false, 
-=======
       isFavourite: false,
       isCompare: false,
->>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -77,14 +76,11 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-<<<<<<< HEAD
       favorites: false,
       myStars: 0,
       compareActive: false,
-=======
       isFavourite: false,
       isCompare: false,
->>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -99,11 +95,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
-<<<<<<< HEAD
-
-=======
       isCompare: false,
->>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -118,11 +110,7 @@ const initialState = {
       myStars: 0,
       compareActive: false,
       isFavourite: false,
-<<<<<<< HEAD
-
-=======
       isCompare: false,
->>>>>>> 89eef4d (Add style for active favourite and compare)
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -376,6 +364,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'chernaya-1',
@@ -389,6 +379,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'ekrulila-2',
@@ -402,6 +394,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'johnson-3',
@@ -415,6 +409,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'pavel-4',
@@ -428,6 +424,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'vakhtbovych-5',
@@ -441,6 +439,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'valeria-6',
@@ -454,6 +454,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'zvir-7',
@@ -467,6 +469,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'zvolskiy-8',
@@ -480,6 +484,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'dorweiler-9',
@@ -493,6 +499,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'kobzar-10',
@@ -506,6 +514,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'lach-11',
@@ -519,6 +529,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'lysenko-12',
@@ -532,6 +544,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'axo-1',
@@ -545,6 +559,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'claire-2',
@@ -558,6 +574,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'karoo-3',
@@ -571,6 +589,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'kayo-4',
@@ -584,6 +604,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'mad-5',
@@ -597,6 +619,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'max-6',
@@ -623,6 +647,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'metz-8',
@@ -636,6 +662,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'oxford-9',
@@ -649,6 +677,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'pechy-10',
@@ -662,6 +692,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'piacquadio-11',
@@ -675,6 +707,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'vakht-12',
@@ -688,6 +722,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'akyurt-1',
@@ -701,6 +737,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'arrow-2',
@@ -714,6 +752,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'ayad-3',
@@ -727,6 +767,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'dids-4',
@@ -740,6 +782,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'henderson-5',
@@ -753,6 +797,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'juan-6',
@@ -766,6 +812,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'marks-7',
@@ -779,6 +827,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'moon-8',
@@ -792,6 +842,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'natan-9',
@@ -805,6 +857,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'pexels-10',
@@ -831,6 +885,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'sun-12',
@@ -844,6 +900,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'batt-1',
@@ -857,6 +915,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'citizen-2',
@@ -870,6 +930,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'houzlook-3',
@@ -883,6 +945,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'inter-4',
@@ -896,6 +960,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'leoshi-5',
@@ -909,6 +975,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'malossi-6',
@@ -922,6 +990,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'petiss-7',
@@ -935,6 +1005,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'satya-8',
@@ -948,6 +1020,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'scott-9',
@@ -961,6 +1035,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'shevtsova-10',
@@ -974,6 +1050,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'twin-11',
@@ -987,6 +1065,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
     },
     {
       id: 'yang-12',
@@ -1000,6 +1080,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: false,
+      isCompare: false,
       isFavourite: false,
       isCompare: false,
     },
