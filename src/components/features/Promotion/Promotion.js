@@ -1,5 +1,6 @@
 import styles from './Promotion.module.scss';
 import React from 'react';
+
 import initialState from '../../../redux/initialState';
 
 const Promotions = () => {
@@ -22,9 +23,13 @@ const Promotions = () => {
           </div>
           <div className={'col-6 '}>
             <div className={'col' + styles.col}>
-              <div>
+              <div className={styles.containerUp}>
                 <div className={styles.imgRight}>
-                  <img src={initialState.products[2].image} alt='chair' />
+                  <img
+                    className={styles.upleft}
+                    src={initialState.products[27].image}
+                    alt='chair'
+                  />
                   <div className={styles.wrapperRightUp}>
                     <p>
                       <span>OFFICE</span> CHAIR <br />
@@ -32,10 +37,15 @@ const Promotions = () => {
                     </p>
                     <p>$200.00</p>
                   </div>
+                  <img
+                    className={styles.upright}
+                    src={initialState.products[27].image}
+                    alt='chair'
+                  />
                 </div>
               </div>
-              <div>
-                <div className={styles.imgSecond}>
+              <div className={styles.containerDown}>
+                <div className={styles.imgRight}>
                   <img
                     src={initialState.products[12].image}
                     alt='promo special collection'
