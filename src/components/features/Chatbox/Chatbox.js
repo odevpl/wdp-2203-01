@@ -1,10 +1,14 @@
-import { AiOutlineRobot, AiOutlineUser } from 'react-icons/ai';
-import { faPaperPlane, faSyncAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { AiOutlineLike } from 'react-icons/ai';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { TiMessages } from 'react-icons/ti';
+import { FcAssistant, FcPortraitMode } from 'react-icons/fc';
+import { GrAttachment, GrDocumentImage } from 'react-icons/gr';
+import { BsPersonCircle } from 'react-icons/bs';
+
+import { RiMailSendLine } from 'react-icons/ri';
 import styles from './Chatbox.module.scss';
 
 const Chatbox = () => {
@@ -24,15 +28,16 @@ const Chatbox = () => {
     input,
     submit,
     messageBox,
-    footer,
     dialogIcon,
+    messageIcon,
+    sendIcon,
+    headerIcon,
   } = styles;
 
   const settings = {
     buttonMessage: 'Ask us a question',
-    placeholderMessage: 'Type your question',
+    placeholderMessage: 'Type your question ...',
     messageboxClass: 'd-none',
-    chooseTopic: 'Choose topic',
   };
 
   document.addEventListener('click', event => {
@@ -61,37 +66,42 @@ const Chatbox = () => {
     <div className={root}>
       <div id={messageBox} className={settings.messageboxClass}>
         <div className={header}>
-          <FontAwesomeIcon className={icon} icon={faSyncAlt} />
+          <BsPersonCircle className={headerIcon} />
           <FontAwesomeIcon className={icon} id={close} icon={faTimes} />
         </div>
         <div className={body}>
           <div className={overlay}></div>
           <div className={logs}>
             <div className={logQuestion}>
-              <AiOutlineUser className={dialogIcon} />
-              <div className={log}>Test question</div>
+              <FcAssistant className={dialogIcon} />
+              <div className={log}>Hi, Can I help you?</div>
             </div>
 
             <div className={`${logAnswer}`}>
-              <AiOutlineRobot className={dialogIcon} />
+              <FcPortraitMode className={dialogIcon} />
               <div className={log}>Test answer</div>
             </div>
-            <Button variant='innerChatbox'>{settings.chooseTopic}</Button>
           </div>
         </div>
         <form className={form}>
+          <button type='submit' className={submit} id={submit}>
+            <GrAttachment className={messageIcon} />
+            <GrDocumentImage className={messageIcon} />
+          </button>
           <input
             type='text'
             className={input}
+            name='entry.724320362'
+            id='entry_724320362'
+            dir='auto'
+            required='true'
             placeholder={settings.placeholderMessage}
           />
           <button type='submit' className={submit} id={submit}>
-            <FontAwesomeIcon icon={faPaperPlane} className={icon} />
+            <AiOutlineLike className={sendIcon} />
+            <RiMailSendLine className={sendIcon} />
           </button>
         </form>
-        <div className={footer}>
-          <TiMessages className={dialogIcon} />
-        </div>
       </div>
       <Button id={open} className='' variant={'floating'}>
         {settings.buttonMessage}
