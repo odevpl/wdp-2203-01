@@ -35,12 +35,12 @@ const Register = () => {
               </label>
               <label className='d-flex justify-content-between'>
                 <span>Phone:</span>
-                <span className='d-flex justify-content-end'>
-                  <select>
+                <div className='col-8 p-0 d-flex justify-content-between'>
+                  <select className=''>
                     <option>+48(PL)</option>
                   </select>
-                  <input className='col-11 ml-2' type='text' />
-                </span>
+                  <input className='col-8' type='text' />
+                </div>
               </label>
               <label className='col-auto d-flex align-items-center mt-4'>
                 <input type='checkbox' />
@@ -55,10 +55,10 @@ const Register = () => {
                 </span>
               </label>
               <div className='d-flex justify-content-center mt-4'>
-                <Button a href='/' variant='small'>
+                <Button href='/' variant='small'>
                   Return
                 </Button>
-                <Button a href='/' variant='small'>
+                <Button href='/' variant='small'>
                   Register
                 </Button>
               </div>
