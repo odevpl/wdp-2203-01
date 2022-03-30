@@ -6,10 +6,8 @@ import productsReducer from './productsRedux';
 import compareReducer from './compareRedux';
 import feedbackReducer from './feedbackRedux';
 import brandsReducer from './brandsRedux';
-<<<<<<< HEAD
 import postsReducer from './postsRedux';
-=======
->>>>>>> 530e37d (fix ProductBox)
+import modeReducer from './modeRedux';
 
 // define reducers
 const reducers = {
