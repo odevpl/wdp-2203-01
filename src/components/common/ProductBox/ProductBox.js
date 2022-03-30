@@ -6,6 +6,7 @@ import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-ico
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Stars from '../Stars/Stars';
+import { Link } from 'react-router-dom';
 
 const ProductBox = ({
   name,
@@ -26,7 +27,9 @@ const ProductBox = ({
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
-      <img src={image} alt='lux bed' />
+      <Link to={`/product/${id}`}>
+        <img src={image} alt='lux bed' />
+      </Link>
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -36,7 +39,9 @@ const ProductBox = ({
       </div>
     </div>
     <div className={styles.content}>
-      <h5>{name}</h5>
+      <Link to={`/product/${id}`}>
+        <h5>{name}</h5>
+      </Link>
       <Stars stars={stars} myStars={myStars} id={id} />
     </div>
     <div className={styles.line}></div>
