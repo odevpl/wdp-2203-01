@@ -41,3 +41,24 @@
     color: $white;
   }
 }
+
+.innerChatbox {
+  @extend .main;
+  width: fit-content;
+  border-radius: 2rem;
+  background-color: transparent;
+  color: $black;
+  border: 2px solid $grayLight;
+  padding: 5px 50px;
+  margin: 5px auto;
+}
+
+.floating {
+  @extend .main;
+  border-radius: 10px;
+  box-shadow: 0 0 4px $button-outline-border;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 100;
+}

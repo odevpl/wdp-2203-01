@@ -9,7 +9,12 @@ import Feedback from '../../features/Feedback/Feedback';
 import CompareBar from '../../features/CompareBar/CompareBar';
 import FurnitureGallery from '../../features/FurnitureGallery/FurnitureGallery';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
+<<<<<<< HEAD
 import BlogHomepage from '../../features/BlogHomepage/BlogHomepage';
+=======
+import Chatbox from '../../features/Chatbox/Chatbox';
+
+>>>>>>> 15a4023 (Chatbox)
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -20,6 +25,7 @@ const Homepage = () => (
     <CompareBar />
     <BlogHomepage />
     <BrandsBar />
+    <Chatbox />
   </div>
 );
 
