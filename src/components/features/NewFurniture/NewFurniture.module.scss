@@ -4,14 +4,12 @@
   .panelBar {
     margin-bottom: 30px;
     position: relative;
-
     :global(.row) > * {
       border-bottom: 4px solid $newFeniture-border;
     }
 
     .heading {
       position: relative;
-
       h3 {
         color: $newFeniture-header-text;
         text-transform: uppercase;
@@ -93,7 +91,7 @@
             border-radius: 6px;
             background-color: $newFeniture-link-bg;
             font-size: 0;
-
+            
             &.active,
             &:hover {
               background-color: $newFeniture-hover-bg;
@@ -107,12 +105,122 @@
     }
   }
 }
+@media (max-width: 1200px) {
+  .root {
+    .panelBar {
+      .heading {
+        flex: 2;
+      }
+      .menu {
+        flex: 4;
+      }
+      .dots {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    .panelBar {
+      position: relative;
+      .heading {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        &::before {
+         display: none;
+        }
+      }
+      .menu {
+        ul {
+          top: -20px;
+          li {
+            a {
+              &.active,
+              &:hover {
+                &::before {
+                  bottom: -5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .dots {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .panelBar {
+      .heading {
+        flex: 2;
+      }
+      .menu {
+        flex: 4;
+      }
+      .dots {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    .panelBar {
+      position: relative;
+      .heading {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        &::before {
+         display: none;
+        }
+      }
+      .menu {
+        ul {
+          top: -20px;
+          li {
+            a {
+              &.active,
+              &:hover {
+                &::before {
+                  bottom: -5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .dots {
+        display:none;
+      }
+    }
+  }
+}
 
 @media (max-width: 576px) {
+  .root {
+    .panelBar {
+      position: relative;
+      .heading {
+        position: absolute;
+        left: 30%;
+      }
+    }
+  }
   .root .panelBar .menu {
     text-align: start;
   }
-
+  .root .panelBar .dots {
+    display: none;
+  }
   .root .panelBar .horizontalMenu svg {
     font-size: 20px;
   }
@@ -140,8 +248,32 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 362px) {
+  .root {
+    .panelBar {
+      position: relative;
+      .heading {
+        position: absolute;
+        left: 35%;
+      }
+    }
+  }
+  .root .panelBar .row .col h3 {
+    text-align: left;
+    }
     .root .panelBar .menu ul li {
     margin: 0 0 0 5px;
   }
+  .root .panelBar .dots {
+    display: none;
+  }
+
+    .root .panelBar .menu ul li a{
+      font-size: 14px; 
+    }
+
+    .root .panelBar .dots {
+      display: none;
+  }
 }
+

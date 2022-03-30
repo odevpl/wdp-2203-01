@@ -5,27 +5,56 @@ import Swipeable from '../../common/Swipeable/Swipeable';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    fade: false,
   };
-
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
-  }
+    this.setState({ fade: true });
 
+    setTimeout(
+      function() {
+        this.setState({ fade: false });
+        this.setState({ activePage: newPage });
+      }.bind(this),
+      250
+    );
+  }
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ fade: true });
+
+    setTimeout(
+      function() {
+        this.setState({ fade: false });
+        this.setState({ activeCategory: newCategory });
+      }.bind(this),
+      250
+    );
   }
 
   render() {
-    const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { categories, products, mode } = this.props;
+    const { activeCategory, activePage, fade } = this.state;
+    let productsPerPage;
+
+    switch (mode) {
+      case 'mobile':
+        productsPerPage = 1;
+        break;
+      case 'tablet':
+        productsPerPage = 2;
+        break;
+      case 'desktop':
+        productsPerPage = 8;
+        break;
+      default:
+        productsPerPage = 4;
+    }
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);
 
     const moveLeft = () => {
       const activePage = this.state.activePage;
@@ -55,7 +84,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <Swipeable leftAction={moveLeft} rightAction={moveRight}>
         <div className={styles.root}>
@@ -67,19 +95,21 @@ class NewFurniture extends React.Component {
                 </div>
                 <div className={'col ' + styles.menu}>
                   <ul>
-                    <li className={styles.horizontalMenu}>
-                      <FontAwesomeIcon className={styles.icon} icon={faBars} />
-                      <ul className={styles.dropdown}>
-                        {categories.map(item => (
-                          <li key={item.id}>
-                            <a
-                              className={item.id === activeCategory && styles.active}
-                              onClick={() => this.handleCategoryChange(item.id)}
-                            >
-                              {item.name}
-                            </a>
-                          </li>
-                        ))}
+                  <li className={styles.horizontalMenu}>
+                    <FontAwesomeIcon className={styles.icon} icon={faBars} />
+                    <ul className={styles.dropdown}>
+                      {categories.map(item => (
+                        <li key={item.id}>
+                          <a
+                            className={
+                              item.id === activeCategory ? styles.active : undefined
+                            }
+                            onClick={() => this.handleCategoryChange(item.id)}
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
                       </ul>
                     </li>
                   </ul>
@@ -89,9 +119,11 @@ class NewFurniture extends React.Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div className={fade ? styles.noVisability : styles.visability}>
             <div className='row'>
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
                 .map(item => (
                   <div key={item.id} className='col-12 col-md-6 col-lg-3'>
                     <ProductBox {...item} />
@@ -104,9 +136,9 @@ class NewFurniture extends React.Component {
     );
   }
 }
-
 NewFurniture.propTypes = {
   children: PropTypes.node,
+  productsPage: PropTypes.string,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -124,8 +156,8 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  mode: PropTypes.string,
 };
-
 NewFurniture.defaultProps = {
   categories: [],
   products: [],
