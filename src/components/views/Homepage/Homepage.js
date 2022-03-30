@@ -12,12 +12,13 @@ import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 import BlogHomepage from '../../features/BlogHomepage/BlogHomepage';
 import Chatbox from '../../features/Chatbox/Chatbox';
 import Promoted from '../../features/Promoted/Promoted';
-
+import Promotion from '../../features/Promotion/Promotion';
 
 const Homepage = () => (
   <div className={styles.root}>
     <Promoted />
     <FeatureBoxes />
+    <Promotion />
     <NewFurniture />
     <FurnitureGallery />
     <Feedback />
