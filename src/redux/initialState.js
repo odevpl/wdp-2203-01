@@ -1091,7 +1091,7 @@ const initialState = {
     products: [],
   },
   compare: [],
-<<<<<<< HEAD
+
   feedbacks: [
     {
       id: 'client1',
@@ -1115,9 +1115,7 @@ const initialState = {
       image: 'src=../../images/feedback/client3.jpg',
     },
   ],
-=======
-<<<<<<< HEAD
->>>>>>> 283db43 (RDW mode: mobile, destop,tablet)
+
   brands: [
     {
       id: 'brand1',
@@ -1180,7 +1178,6 @@ const initialState = {
     },
   ],
   mode: ' ',
-
 };
 
 export default initialState;

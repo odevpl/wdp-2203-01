@@ -11,7 +11,7 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
     fade: false,
   };
-  handlePageChange(newPage) {g
+  handlePageChange(newPage) {
     this.setState({ fade: true });
 
     setTimeout(
@@ -35,7 +35,6 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-
     const { categories, products, mode } = this.props;
     const { activeCategory, activePage, fade } = this.state;
 
@@ -54,7 +53,6 @@ class NewFurniture extends React.Component {
       default:
         productsPerPage = 4;
     }
-
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / productsPerPage);
@@ -98,21 +96,21 @@ class NewFurniture extends React.Component {
                 </div>
                 <div className={'col ' + styles.menu}>
                   <ul>
-                  <li className={styles.horizontalMenu}>
-                    <FontAwesomeIcon className={styles.icon} icon={faBars} />
-                    <ul className={styles.dropdown}>
-                      {categories.map(item => (
-                        <li key={item.id}>
-                          <a
-                            className={
-                              item.id === activeCategory ? styles.active : undefined
-                            }
-                            onClick={() => this.handleCategoryChange(item.id)}
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
+                    <li className={styles.horizontalMenu}>
+                      <FontAwesomeIcon className={styles.icon} icon={faBars} />
+                      <ul className={styles.dropdown}>
+                        {categories.map(item => (
+                          <li key={item.id}>
+                            <a
+                              className={
+                                item.id === activeCategory ? styles.active : undefined
+                              }
+                              onClick={() => this.handleCategoryChange(item.id)}
+                            >
+                              {item.name}
+                            </a>
+                          </li>
+                        ))}
                       </ul>
                     </li>
                   </ul>
@@ -123,17 +121,17 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-        <div className={fade ? styles.noVisability : styles.visability}>
-          <div className='row'>
-            {categoryProducts
-              .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
-              .map(item => (
-                <div key={item.id} className='col-lg-3 col-sm-6'>
-                  <ProductBox {...item} />
-                </div>
-              ))}
+          <div className={fade ? styles.noVisability : styles.visability}>
+            <div className='row'>
+              {categoryProducts
+                .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
+                .map(item => (
+                  <div key={item.id} className='col-lg-3 col-sm-6'>
+                    <ProductBox {...item} />
+                  </div>
+                ))}
+            </div>
           </div>
-        </div>
         </div>
       </Swipeable>
     );
