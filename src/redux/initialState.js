@@ -18,9 +18,9 @@ const initialState = {
       newFurniture: true,
       favorites: false,
       myStars: 3,
+      compareActive: false,
       isFavourite: true,
-      isCompare: true,
-      compareActive: true,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -33,8 +33,8 @@ const initialState = {
       newFurniture: true,
       favorites: false,
       myStars: 3,
+      compareActive: true,
       isFavourite: true,
-      compareActive: false,
       isCompare: false,
     },
     {
@@ -48,9 +48,9 @@ const initialState = {
       newFurniture: true,
       favorites: true,
       myStars: 0,
-      isFavourite: true,
-      isCompare: true,
       compareActive: true,
+      isFavourite: true,
+      isCompare: false,
     },
     {
       id: 'aenean-ru-bristique-4',

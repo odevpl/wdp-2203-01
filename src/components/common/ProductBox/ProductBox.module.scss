@@ -130,13 +130,25 @@
     .price {
       background-color: $productBox-price-hover-bg;
     }
+  }
+
 
   .favoriteActive {
-    color: $productBox-favourite-active;
+    color: $black;
+
+    .isCompare {
+      color: $orange;
+    }
+    .isFavorite {
+      color: $white;
   }
 
   .compareActive {
     color: $productBox-compare-active;
   }
+  
+    
+  }
 }
-}
+
+

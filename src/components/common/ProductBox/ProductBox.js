@@ -71,11 +71,11 @@ const ProductBox = ({
           variant='outline'
         >
           {isFavourite && (
-            <FontAwesomeIcon className={styles.favoriteActive} icon={faHeart}>
+            <FontAwesomeIcon className={styles.favoriteActiveIcon} icon={farHeart}>
               Favorite
             </FontAwesomeIcon>
           )}
-          {!isFavourite && <FontAwesomeIcon icon={farHeart}>Favorite</FontAwesomeIcon>}
+          {!isFavourite && <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>}
         </Button>
         <Button
           className={compareActive ? styles.active : styles.outlines}
