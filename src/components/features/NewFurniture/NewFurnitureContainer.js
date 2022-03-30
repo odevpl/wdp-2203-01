@@ -8,7 +8,6 @@ import { getMode } from '../../../redux/modeRedux.js';
 const mapStateToProps = state => ({
   categories: getAll(state),
   products: getNew(state),
-  mode: getMode(state),
 });
 
 export default connect(mapStateToProps)(NewFurniture);

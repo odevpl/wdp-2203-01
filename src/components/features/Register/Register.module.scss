@@ -1,0 +1,25 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 100px 0;
+  .bodyForm {
+    .form {
+      select,
+      input {
+        font-size: 14px;
+      }
+    }
+    .head {
+      h3 {
+        font-size: 20px;
+        color: $black;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
+    a {
+      margin: 0 10px;
+    }
+  }
+}
