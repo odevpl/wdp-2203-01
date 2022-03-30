@@ -8,11 +8,13 @@ const Register = () => {
     <div className={styles.root}>
       <div className='container'>
         <div className={styles.bodyForm}>
-          <div className={'row justify-content-center ' + styles.head}>
-            <h3>Create an account</h3>
-          </div>
           <div className='row justify-content-center'>
             <form className={'col-6 mt-5 d-flex flex-column ' + styles.form}>
+              <label
+                className={'d-flex justify-content-end text-center mb-4 ' + styles.head}
+              >
+                <h3 className='col-8 '>Create an account</h3>
+              </label>
               <label className='d-flex justify-content-between'>
                 <span>Name:</span>
                 <input className='col-8' type='text' />
