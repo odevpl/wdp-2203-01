@@ -955,6 +955,35 @@ const initialState = {
       image: 'src=../../images/brands/brand6.jpg',
     },
   ],
+  posts: [
+    {
+      id: 'post1',
+      date: '15 JAN 2016',
+      commentsCount: 4,
+      title: 'Duis erat quis pharetra',
+      content:
+        'Sed scelerisque turpis eu convallis dignissim. Phasellus dapibus sapien sed erat imperdiet, sit amet tincidunt ligula porta. Aenean quis dictum quam. Maecenas sed est eget enim convallis semper sit amet in erat. Mauris sagittis.',
+      image: '',
+    },
+    {
+      id: 'post2',
+      date: '15 JAN 2016',
+      commentsCount: 4,
+      title: 'Duis erat quis pharetra',
+      content:
+        'Sed scelerisque turpis eu convallis dignissim. Phasellus dapibus sapien sed erat imperdiet, sit amet tincidunt ligula porta. Aenean quis dictum quam. Maecenas sed est eget enim convallis semper sit amet in erat. Mauris sagittis.',
+      image: '',
+    },
+    {
+      id: 'post3',
+      date: '15 JAN 2016',
+      commentsCount: 4,
+      title: 'Duis erat quis pharetra',
+      content:
+        'Sed scelerisque turpis eu convallis dignissim. Phasellus dapibus sapien sed erat imperdiet, sit amet tincidunt ligula porta. Aenean quis dictum quam. Maecenas sed est eget enim convallis semper sit amet in erat. Mauris sagittis risus.',
+      image: '',
+    },
+  ],
   mode: ' ',
 };
 

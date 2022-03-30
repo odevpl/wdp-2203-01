@@ -9,6 +9,7 @@ import Feedback from '../../features/Feedback/Feedback';
 import CompareBar from '../../features/CompareBar/CompareBar';
 import FurnitureGallery from '../../features/FurnitureGallery/FurnitureGallery';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
+import BlogHomepage from '../../features/BlogHomepage/BlogHomepage';
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -17,6 +18,7 @@ const Homepage = () => (
     <FurnitureGallery />
     <Feedback />
     <CompareBar />
+    <BlogHomepage />
     <BrandsBar />
   </div>
 );
