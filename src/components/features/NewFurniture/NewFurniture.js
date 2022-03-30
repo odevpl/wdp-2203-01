@@ -162,4 +162,5 @@ NewFurniture.defaultProps = {
   categories: [],
   products: [],
 };
+
 export default NewFurniture;
