@@ -91,7 +91,7 @@
             border-radius: 6px;
             background-color: $newFeniture-link-bg;
             font-size: 0;
-            
+
             &.active,
             &:hover {
               background-color: $newFeniture-hover-bg;
@@ -105,6 +105,7 @@
     }
   }
 }
+
 @media (max-width: 1200px) {
   .root {
     .panelBar {
@@ -205,18 +206,20 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 741px) {
   .root {
     .panelBar {
       position: relative;
       .heading {
         position: absolute;
         left: 30%;
+        bottom: -42px;
       }
     }
   }
   .root .panelBar .menu {
-    text-align: start;
+    text-align: end;
+    padding-right: 25%;
   }
   .root .panelBar .dots {
     display: none;
@@ -244,7 +247,7 @@
   }
 
   .root .panelBar .menu ul li {
-    margin: 0 0 0 20px;
+    margin: 0 0 5px 20px;
   }
 }
 
@@ -262,14 +265,14 @@
     text-align: left;
     }
     .root .panelBar .menu ul li {
-    margin: 0 0 0 5px;
+    margin: 0 0 5px 5px;
   }
   .root .panelBar .dots {
     display: none;
   }
 
     .root .panelBar .menu ul li a{
-      font-size: 14px; 
+      font-size: 14px;
     }
 
     .root .panelBar .dots {
