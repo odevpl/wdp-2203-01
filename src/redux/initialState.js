@@ -631,12 +631,9 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
-<<<<<<< HEAD
       favorites: false,
       myStars: 0,
-=======
       isFavourite: true,
->>>>>>> 530e37d (fix ProductBox)
       compareActive: false,
     },
     {
