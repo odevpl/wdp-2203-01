@@ -208,7 +208,12 @@
   }
 }
 
-@media (max-width: 741px) {
+
+
+
+
+@media (max-width: 576px) {
+
   .root {
     .panelBar {
       position: relative;
@@ -219,6 +224,9 @@
       }
     }
   }
+
+@media (max-width: 741px) {
+
   .root .panelBar .menu {
     text-align: end;
     padding-right: 25%;
@@ -280,5 +288,6 @@
     .root .panelBar .dots {
       display: none;
   }
+}
 }
 
