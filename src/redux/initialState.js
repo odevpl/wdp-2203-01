@@ -18,7 +18,6 @@ const initialState = {
       newFurniture: true,
       favorites: false,
       myStars: 3,
-      compareActive: false,
       isFavourite: true,
       isCompare: true,
       compareActive: true,
@@ -32,7 +31,10 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+      favorites: false,
+      myStars: 3,
       isFavourite: true,
+      compareActive: false,
       isCompare: false,
     },
     {
@@ -46,8 +48,7 @@ const initialState = {
       newFurniture: true,
       favorites: true,
       myStars: 0,
-      compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: true,
       compareActive: true,
     },
@@ -63,8 +64,7 @@ const initialState = {
       favorites: true,
       myStars: 0,
       compareActive: false,
-      isFavourite: false, 
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -79,7 +79,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -94,7 +94,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -109,7 +109,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -124,7 +124,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -139,7 +139,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -154,7 +154,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -169,7 +169,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -184,7 +184,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -199,7 +199,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -214,7 +214,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -229,7 +229,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -244,7 +244,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -259,7 +259,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -274,7 +274,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -289,7 +289,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -304,7 +304,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -319,7 +319,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -334,7 +334,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -349,7 +349,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -364,7 +364,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -379,7 +379,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -394,7 +394,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -409,7 +409,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -424,7 +424,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -439,7 +439,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -454,7 +454,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -469,7 +469,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -484,7 +484,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -499,7 +499,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -514,7 +514,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -529,7 +529,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -544,7 +544,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -559,7 +559,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -574,7 +574,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -589,7 +589,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -604,7 +604,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -619,7 +619,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -631,8 +631,12 @@ const initialState = {
       stars: 2,
       promo: 'sale',
       newFurniture: true,
+<<<<<<< HEAD
       favorites: false,
       myStars: 0,
+=======
+      isFavourite: true,
+>>>>>>> 530e37d (fix ProductBox)
       compareActive: false,
     },
     {
@@ -647,7 +651,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -662,7 +666,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -677,7 +681,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -692,7 +696,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -707,7 +711,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -722,7 +726,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -737,7 +741,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -752,7 +756,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -767,7 +771,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -782,7 +786,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -797,7 +801,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -812,7 +816,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -827,7 +831,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -842,7 +846,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -857,7 +861,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -872,6 +876,8 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
+      isFavourite: true,
+      isCompare: false,
     },
     {
       id: 'scream-11',
@@ -885,7 +891,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -900,7 +906,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -915,7 +921,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -930,7 +936,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -945,7 +951,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -960,7 +966,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -975,7 +981,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -990,7 +996,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -1005,7 +1011,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -1020,7 +1026,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -1035,7 +1041,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -1050,7 +1056,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -1065,7 +1071,7 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
+      isFavourite: true,
       isCompare: false,
     },
     {
@@ -1080,8 +1086,6 @@ const initialState = {
       favorites: false,
       myStars: 0,
       compareActive: false,
-      isFavourite: false,
-      isCompare: false,
       isFavourite: false,
       isCompare: false,
     },

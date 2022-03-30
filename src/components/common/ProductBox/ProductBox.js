@@ -2,14 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import {
-<<<<<<< HEAD
-=======
-  faStar,
   faHeart,
->>>>>>> 89eef4d (Add style for active favourite and compare)
   faExchangeAlt,
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
@@ -49,7 +43,7 @@ const ProductBox = ({
   const handleCloseProdPopup = () => setShowProdPopup(false);
 
   return (
-    
+
   <div className={styles.root}>
     <div className={styles.photo}>
     <Link to={`/product/${id}`}>
