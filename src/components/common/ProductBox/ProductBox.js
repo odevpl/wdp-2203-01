@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -29,6 +30,7 @@ const ProductBox = ({
   compare,
   compareActive,
   addActiveClass,
+  updateInitialState,
 }) => {
   const [showProdPopup, setShowProdPopup] = useState(false);
 
@@ -37,6 +39,14 @@ const ProductBox = ({
     setShowProdPopup(true);
   };
   const handleCloseProdPopup = () => setShowProdPopup(false);
+
+  const myFovorite = localStorage.getItem(id);
+
+  useEffect(() => {
+    if (myFovorite !== null) {
+      updateInitialState({ id });
+    }
+  }, [id, myFovorite, updateInitialState]);
 
   return (
     <div className={styles.root}>
@@ -66,6 +76,9 @@ const ProductBox = ({
             onClick={e => {
               e.preventDefault();
               favorites ? removeFromFavorites({ id }) : addToFavorites({ id });
+              favorites
+                ? localStorage.removeItem(id, id)
+                : localStorage.setItem(id, id);
             }}
             variant='outline'
           >
@@ -127,6 +140,7 @@ ProductBox.propTypes = {
   category: PropTypes.string,
   isFavourite: PropTypes.bool,
   isCompare: PropTypes.bool,
+  updateInitialState: PropTypes.func,
 };
 
 export default ProductBox;
