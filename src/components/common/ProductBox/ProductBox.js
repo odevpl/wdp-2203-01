@@ -12,7 +12,6 @@ import Stars from '../Stars/Stars';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ProductPopup from '../ProductPopup/ProductPopup';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 
 const ProductBox = ({
   name,
@@ -30,8 +29,6 @@ const ProductBox = ({
   compare,
   compareActive,
   addActiveClass,
-  isCompare,
-  isFavourite,
 }) => {
   const [showProdPopup, setShowProdPopup] = useState(false);
 
@@ -57,6 +54,10 @@ const ProductBox = ({
           </Button>
         </div>
       </div>
+      <div className={styles.content}>
+        <h5>{name}</h5>
+        <Stars stars={stars} myStars={myStars} id={id} />
+      </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
@@ -68,12 +69,7 @@ const ProductBox = ({
             }}
             variant='outline'
           >
-            {isFavourite && (
-              <FontAwesomeIcon className={styles.favoriteActiveIcon} icon={farHeart}>
-                Favorite
-              </FontAwesomeIcon>
-            )}
-            {!isFavourite && <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>}
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button
             className={compareActive ? styles.active : styles.outlines}
@@ -86,14 +82,7 @@ const ProductBox = ({
               }
             }}
           >
-            {isCompare && (
-              <FontAwesomeIcon className={styles.compareActive} icon={faExchangeAlt}>
-                Add to compare
-              </FontAwesomeIcon>
-            )}
-            {!isCompare && (
-              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-            )}
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.priceWraper}>
