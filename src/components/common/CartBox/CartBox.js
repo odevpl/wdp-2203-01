@@ -17,7 +17,7 @@ const CartBox = () => (
     <div className='col-1'>
       <span className={styles.productPrice}>$30</span>
     </div>
-    <div className='col-3'>quantity</div>
+    <div className={'col-3 ' + styles.productQuantity}>quantity</div>
     <div className='col-1'>
       <span className={styles.total}>$30</span>
     </div>

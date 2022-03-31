@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 import CartBox from '../../common/CartBox/CartBox';
+import Button from '../../common/Button/Button';
 
 import styles from './Cart.module.scss';
 
@@ -32,12 +33,25 @@ const Cart = () => (
           <div className='col-1'>
             <span className={styles.productPrice}>Price</span>
           </div>
-          <div className='col-3'>quantity</div>
+          <div className={'col-3 ' + styles.productQuantity}>quantity</div>
           <div className='col-1'>
             <span className={styles.total}>Total</span>
           </div>
         </div>
         <CartBox />
+        <CartBox />
+        <CartBox />
+        <div className={'col-12 ' + styles.bodyFooter}>
+          <div className={styles.coupon}>
+            <input placeholder='Coupon code' />
+            <Button variant='small'>Apply coupon</Button>
+          </div>
+          <div>
+            <Button variant='small' className={styles.noActive}>
+              Update cart
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

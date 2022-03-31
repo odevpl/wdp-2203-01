@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  margin-top: 50px;
+  margin: 50px 0;
 
   .name {
     height: 120px;
@@ -17,6 +17,7 @@
 
   .cartBody {
     border: solid 1px $gray225;
+    border-left: 0px;
 
     .bodyHeader {
       height: 60px;
@@ -26,6 +27,41 @@
 
       .productName {
         padding-left: 50px;
+      }
+
+      .productQuantity {
+        padding-left: 25px;
+      }
+    }
+
+    .bodyFooter {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -15px;
+
+      a {
+        text-transform: uppercase;
+        margin-left: 15px;
+        padding: 10px 25px;
+
+        &.noActive {
+          opacity: 0.6;
+        }
+      }
+
+      .coupon {
+        input {
+          border: solid 1px $gray225;
+          border-radius: 5px;
+          padding: 3px 0;
+
+          &::placeholder {
+            font-size: 14px;
+            padding-left: 15px;
+          }
+        }
       }
     }
   }
