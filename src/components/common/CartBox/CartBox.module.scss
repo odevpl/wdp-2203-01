@@ -1,0 +1,29 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  display: flex;
+
+  .icon {
+    cursor: pointer;
+    font-size: 30px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .image {
+    width: 80px;
+    height: 80px;
+    background-color: grey;
+  }
+
+  .productName {
+  }
+
+  .productPrice {
+  }
+
+  .total{
+  }
+}
