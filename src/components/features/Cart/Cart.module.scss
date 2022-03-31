@@ -20,7 +20,13 @@
 
     .bodyHeader {
       height: 60px;
+      display: flex;
+      align-items: center;
       background-color: $gray240;
+
+      .productName {
+        padding-left: 50px;
+      }
     }
   }
 }

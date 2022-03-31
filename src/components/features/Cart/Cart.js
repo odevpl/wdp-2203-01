@@ -23,7 +23,20 @@ const Cart = () => (
     </div>
     <div className='container'>
       <div className={styles.cartBody}>
-        <div className={styles.bodyHeader}></div>
+        <div className={'col-12 ' + styles.bodyHeader}>
+          <div className='col-1'></div>
+          <div className={'col-1'}></div>
+          <div className='col-5'>
+            <span className={styles.productName}>Product</span>
+          </div>
+          <div className='col-1'>
+            <span className={styles.productPrice}>Price</span>
+          </div>
+          <div className='col-3'>quantity</div>
+          <div className='col-1'>
+            <span className={styles.total}>Total</span>
+          </div>
+        </div>
         <CartBox />
       </div>
     </div>
