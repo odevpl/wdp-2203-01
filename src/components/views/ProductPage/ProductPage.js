@@ -1,9 +1,13 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import styles from './ProductPage.module.scss';
 
-const ProductPage = () => <div className={styles.root}>This is ProductPage</div>;
-
-// ProductPage.propTypes = {};
+const ProductPage = () => (
+  <div className={'container ' + styles.pageWrapper}>
+    <div>
+      <NewFurniture productsPage='4' />
+    </div>
+  </div>
+);
 
 export default ProductPage;
