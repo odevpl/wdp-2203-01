@@ -4,20 +4,23 @@
   margin: 50px 0;
 
   .name {
+    display: flex;
+    align-items: center;
     height: 120px;
     margin: 30px 0;
-    background-color: $gray240;
+    background-color: $cart-name-background;
   }
 
   .cartBody {
-    border: solid 1px $gray225;
+    border: solid 1px $cart-cartBody-border;
     border-left: none;
 
     .bodyHeader {
       height: 60px;
       display: flex;
       align-items: center;
-      background-color: $gray240;
+      background-color: $cart-bodyHeader;
+      border-bottom: solid 1px $cart-bodyHeader-border;
       text-transform: uppercase;
       font-weight: 600;
 
@@ -50,7 +53,7 @@
 
       .coupon {
         input {
-          border: solid 1px $gray225;
+          border: solid 1px $cart-input-border;
           border-radius: 5px;
           padding: 3px 0;
 
@@ -76,7 +79,7 @@
     .cartTotalBody {
       display: flex;
       flex-wrap: wrap;
-      border: solid 1px $gray225;
+      border: solid 1px $cart-totalBody-border;
       border-left: none;
       padding: 0;
 
@@ -86,7 +89,8 @@
         font-weight: 600;
         margin-bottom: 20px;
         text-align: center;
-        background-color: $gray240;
+        background-color: $cart-totalHead-background;
+        border-bottom: solid 1px $cart-totalHead-border;
       }
 
       .cartTotalSummary {
@@ -96,20 +100,25 @@
 
         &:last-of-type {
           margin-bottom: 25px;
+
+          span {
+            &:last-of-type {
+              font-weight: 600;
+            }
+          }
         }
 
         span {
           padding: 10px 10px;
-
-          border-bottom: solid 1px $gray225;
+          border-bottom: solid 1px $cart-cartTotal-span-border;
 
           &:first-of-type {
             font-weight: 600;
           }
 
           &:last-of-type {
-            border-left: solid 1px $gray225;
-            color: $orange;
+            border-left: solid 1px $cart-cartTotal-span-border;
+            color: $cart-cartTotal-span-color;
           }
         }
       }
