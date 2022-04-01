@@ -77,7 +77,7 @@ const Stars = ({ stars, myStars, id }) => {
 Stars.propTypes = {
   stars: PropTypes.number,
   myStars: PropTypes.number,
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 export default Stars;

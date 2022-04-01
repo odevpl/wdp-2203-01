@@ -10,7 +10,7 @@ import Button from '../../common/Button/Button';
 
 const FurnitureGallery = () => {
   const products = useSelector(state => getAllProducts(state));
-  const sliderProducts = products.splice(0, 6);
+  const sliderProducts = products.slice(0, 6);
   const product = products[0];
 
   return (
