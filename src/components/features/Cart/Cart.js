@@ -53,6 +53,22 @@ const Cart = () => (
           </div>
         </div>
       </div>
+      <div className={'col-12 ' + styles.cartTotal}>
+        <div className={'col-7 ' + styles.cartTotalBody}>
+          <div className={'col-12 ' + styles.cartTotalHead}>Cart totals</div>
+          <div className={'col-11 ' + styles.cartTotalSummary}>
+            <span className='col-5'>Subtotal: </span>
+            <span className='col-7'>$90</span>
+          </div>
+          <div className={'col-11 ' + styles.cartTotalSummary}>
+            <span className='col-5'>Total: </span>
+            <span className='col-7'>$90</span>
+          </div>
+          <Button variant='small' className='col-11'>
+            Proceed to checkout
+          </Button>
+        </div>
+      </div>
     </div>
   </div>
 );

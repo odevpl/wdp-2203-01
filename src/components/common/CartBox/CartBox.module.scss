@@ -17,7 +17,7 @@
 
   .icon {
     cursor: pointer;
-    font-size: 30px;
+    font-size: 26px;
 
     &:hover {
       color: $orange;
@@ -34,13 +34,31 @@
     padding-left: 50px;
   }
 
-  .productPrice {
+  .productPrice,
+  .total {
+    color: $orange;
   }
 
   .productQuantity {
     padding-left: 25px;
-  }
+    display: flex;
 
-  .total{
+     input {
+       text-align: center;
+      border: solid 1px $gray225;
+      background-color: #fff;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:first-of-type {
+        border-right: none;
+      }
+
+      &:last-of-type {
+        border-left: none;
+      }
+    }
   }
 }
