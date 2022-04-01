@@ -4,6 +4,7 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 import styles from './MenuBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const MenuBar = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -17,29 +18,55 @@ const MenuBar = ({ children }) => {
           </div>
           <div className={'col ' + styles.menu + (open ? ' ' + styles.activeMenu : '')}>
             <ul>
-              <li>
-                <a href='/home' className={styles.active}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href='/shop/furniture'>Furniture</a>
-              </li>
-              <li>
-                <a href='/shop/chair'>Chair</a>
-              </li>
-              <li>
-                <a href='/shop/table'>Table</a>
-              </li>
-              <li>
-                <a href='/shop/sofa'>Sofa</a>
-              </li>
-              <li>
-                <a href='/shop/bedroom'>Bedroom</a>
-              </li>
-              <li>
-                <a href='/blog'>Blog</a>
-              </li>
+              <NavLink
+                exact
+                to='/'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                exact
+                to='/shop/furniture'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                Furniture
+              </NavLink>
+              <NavLink
+                exact
+                to='/shop/chair'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                Chair
+              </NavLink>
+              <NavLink
+                exact
+                to='/shop/table'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                table
+              </NavLink>
+              <NavLink
+                exact
+                to='/shop/sofa'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                sofa
+              </NavLink>
+              <NavLink
+                exact
+                to='/shop/bedroom'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                bedroom
+              </NavLink>
+              <NavLink
+                exact
+                to='/blog'
+                className={isActive => (isActive ? styles.active : undefined)}
+              >
+                blog
+              </NavLink>
             </ul>
           </div>
           <a href='#' className={styles.dropdown} onClick={() => setOpen(!open)}>

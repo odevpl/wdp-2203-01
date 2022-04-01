@@ -42,13 +42,16 @@ const Chatbox = () => {
 
   document.addEventListener('click', event => {
     event.preventDefault();
-    if (event.target.id === open) {
-      handleOpen(event);
-    } else if (
-      event.target.closest(`#${close}`) ||
-      !event.target.closest(`#${messageBox}`)
-    ) {
-      handleClose(event);
+    const isChatBoxRender = document.getElementById(messageBox);
+    if (isChatBoxRender) {
+      if (event.target.id === open) {
+        handleOpen(event);
+      } else if (
+        event.target.closest(`#${close}`) ||
+        !event.target.closest(`#${messageBox}`)
+      ) {
+        handleClose(event);
+      }
     }
   });
 
