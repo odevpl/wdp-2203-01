@@ -60,7 +60,7 @@ const Cart = () => (
             <span className='col-5'>Total </span>
             <span className='col-7'>$90</span>
           </div>
-          <Button variant='small' className='col-11'>
+          <Button href='/' variant='small' className='col-11'>
             Proceed to checkout
           </Button>
         </div>
