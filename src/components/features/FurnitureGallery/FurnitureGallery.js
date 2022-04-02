@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './FurnitureGallery.module.scss';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 //import PropTypes from 'prop-types';
 
 import FurnitureGalleryActiv from '../../common/FurnitureGalleryActiv/FurnitureGalleryActiv';
@@ -10,8 +11,26 @@ import Button from '../../common/Button/Button';
 
 const FurnitureGallery = () => {
   const products = useSelector(state => getAllProducts(state));
-  const sliderProducts = products.slice(0, 6);
   const product = products[0];
+
+  let productsPerSlider = 6;
+
+  //const [fade, setfade] = useState(false);
+  const [activePage, setActivePage] = useState(0);
+  const [categoryProducts, setCategoryProducts] = useState(
+    products.filter(product => product['topSeller'] === true)
+  );
+
+  const sliderProducts = categoryProducts.slice(activePage, productsPerSlider);
+  const pagesCount = Math.ceil(categoryProducts.length / productsPerSlider);
+
+  const [activeProduct, setActiveProduct] = useState(sliderProducts[1]);
+
+  const handleCategoryChange = category => {
+    setCategoryProducts(products.filter(product => product[category] === true));
+  };
+
+  //console.log(sliderProducts);
 
   return (
     <div className='container'>
@@ -24,23 +43,40 @@ const FurnitureGallery = () => {
             <div className={styles.menu}>
               <ul className='row'>
                 <li className='col'>
-                  <a href='#'>Featured</a>
+                  <a href='#' onClick={() => handleCategoryChange('featured')}>
+                    Featured
+                  </a>
                 </li>
                 <li className='col'>
-                  <a href='#' className={styles.active}>
+                  <a
+                    href='#'
+                    onClick={() => handleCategoryChange('topSeller')}
+                    className={styles.active}
+                  >
                     Top seller
                   </a>
                 </li>
                 <li className='col'>
-                  <a href='#'>Sale off</a>
+                  <a href='#' onClick={() => handleCategoryChange('saleOff')}>
+                    Sale off
+                  </a>
                 </li>
                 <li className='col'>
-                  <a href='#'>Top rated</a>
+                  <a href='#' onClick={() => handleCategoryChange('topRated')}>
+                    Top rated
+                  </a>
                 </li>
               </ul>
             </div>
-            <FurnitureGalleryActiv {...sliderProducts[1]} />
-            <FurnitureGallerySlider sliderProducts={sliderProducts} />
+            <FurnitureGalleryActiv {...activeProduct} />
+            <FurnitureGallerySlider
+              sliderProducts={sliderProducts}
+              activePage={activePage}
+              setActivePage={setActivePage}
+              pagesCount={pagesCount}
+              activeProduct={activeProduct}
+              setActiveProduct={setActiveProduct}
+            />
           </div>
           <div className='col'>
             <div className={styles.photo}>

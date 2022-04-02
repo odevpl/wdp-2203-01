@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './FurnitureGallerySlider.module.scss';
 import PropTypes from 'prop-types';
 
@@ -7,13 +7,36 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../Button/Button';
 
-const FurnitureGallerySlider = ({ sliderProducts }) => {
-  const [activProduct, setActivProduct] = useState(sliderProducts[1]);
+const FurnitureGallerySlider = ({
+  sliderProducts,
+  activePage,
+  setActivePage,
+  pagesCount,
+  activeProduct,
+  setActiveProduct,
+}) => {
+  const moveLeft = () => {
+    if (activePage > 0) {
+      setActivePage(activePage - 1);
+    }
+  };
+
+  const moveRight = () => {
+    const maxPage = pagesCount - 1;
+    if (activePage < maxPage) {
+      setActivePage(activePage + 1);
+    }
+  };
 
   return (
     <div className={styles.root}>
       <div className={styles.sliderWrapper}>
-        <Button className={styles.button} noHover variant='small'>
+        <Button
+          className={styles.button}
+          noHover
+          variant='small'
+          onClick={() => moveLeft()}
+        >
           <FontAwesomeIcon icon={faAngleLeft} />
         </Button>
         {sliderProducts.map(product => (
@@ -22,14 +45,20 @@ const FurnitureGallerySlider = ({ sliderProducts }) => {
             className={
               styles.photo +
               ' ' +
-              (activProduct.id === product.id ? styles.isActive : styles.notActive)
+              (activeProduct['id'] === product.id ? styles.isActive : styles.notActive)
             }
+            onClick={() => setActiveProduct(product)}
           >
             <img src={product.image} alt='' />
             <div className={styles.overlay}></div>
           </div>
         ))}
-        <Button className={styles.button} noHover variant='small'>
+        <Button
+          className={styles.button}
+          noHover
+          variant='small'
+          onClick={() => moveRight()}
+        >
           <FontAwesomeIcon icon={faAngleRight} />
         </Button>
       </div>
@@ -52,6 +81,11 @@ FurnitureGallerySlider.propTypes = {
       compareActive: PropTypes.bool,
     })
   ),
+  activePage: PropTypes.number,
+  setActivePage: PropTypes.func,
+  pagesCount: PropTypes.number,
+  activeProduct: PropTypes.object,
+  setActiveProduct: PropTypes.func,
 };
 
 export default FurnitureGallerySlider;
