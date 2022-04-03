@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import MainLayout from './components/layout/MainLayout/MainLayoutContainer';
 import Homepage from './components/views/Homepage/Homepage';
 import ProductList from './components/views/ProductList/ProductList';
-import ProductPage from './components/views/ProductPage/ProductPage';
+import ProductPage from './components/views/ProductPage/ProductPageContainer';
 import Blog from './components/views/Blog/Blog';
 import Register from './components/features/Register/Register';
 
