@@ -17,6 +17,7 @@ import ProductPopup from '../ProductPopup/ProductPopup';
 const ProductBox = ({
   name,
   price,
+  oldPrice,
   promo,
   stars,
   image,
@@ -28,9 +29,11 @@ const ProductBox = ({
   myStars,
   addToCompare,
   compare,
+  isHovered,
   compareActive,
   addActiveClass,
   updateInitialState,
+  viewPromoted,
 }) => {
   const [showProdPopup, setShowProdPopup] = useState(false);
 
@@ -49,13 +52,20 @@ const ProductBox = ({
   }, [id, myFovorite, updateInitialState]);
 
   return (
-    <div className={styles.root}>
+    <div
+      className={styles.root}
+      onMouseEnter={() => isHovered(true)}
+      onMouseLeave={() => isHovered(false)}
+    >
       <div className={styles.photo}>
         <Link to={`/product/${id}`}>
           <img src={image} alt='lux bed' />
         </Link>
         {promo && <div className={styles.sale}>{promo}</div>}
-        <div className={styles.buttons}>
+        <div
+          className={`${styles.buttons} ${viewPromoted ? styles.hotDealButtons : null}`}
+        >
+          {!viewPromoted ? <Button variant='small'>Quick View</Button> : null}
           <Button variant='small' onClick={handleShowProdPopup}>
             Quick View
           </Button>
@@ -100,7 +110,7 @@ const ProductBox = ({
         </div>
         <div className={styles.priceWraper}>
           <div>
-            {promo === 'sale' && <div className={styles.oldPrice}>$ {price} </div>}
+            {promo === 'sale' && <div className={styles.oldPrice}>${oldPrice} </div>}
           </div>
           <div className={styles.price}>$ {price}</div>
         </div>
@@ -125,6 +135,7 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.node,
@@ -141,6 +152,8 @@ ProductBox.propTypes = {
   isFavourite: PropTypes.bool,
   isCompare: PropTypes.bool,
   updateInitialState: PropTypes.func,
+  isHovered: PropTypes.func,
+  viewPromoted: PropTypes.bool,
 };
 
 export default ProductBox;

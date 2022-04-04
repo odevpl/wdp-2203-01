@@ -11,7 +11,7 @@ import FurnitureGallery from '../../features/FurnitureGallery/FurnitureGallery';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 import BlogHomepage from '../../features/BlogHomepage/BlogHomepage';
 import Chatbox from '../../features/Chatbox/Chatbox';
-import Promoted from '../../features/Promoted/Promoted';
+import Promoted from '../../features/Promoted/PromotedContainer';
 import Promotion from '../../features/Promotion/Promotion';
 
 const Homepage = () => (
