@@ -13,7 +13,7 @@ const FurnitureGallerySlider = ({
   setActivePage,
   pagesCount,
   activeProduct,
-  setActiveProduct,
+  changeActivProduct,
 }) => {
   const moveLeft = () => {
     if (activePage > 0) {
@@ -47,7 +47,7 @@ const FurnitureGallerySlider = ({
               ' ' +
               (activeProduct['id'] === product.id ? styles.isActive : styles.notActive)
             }
-            onClick={() => setActiveProduct(product)}
+            onClick={() => changeActivProduct(product)}
           >
             <img src={product.image} alt='' />
             <div className={styles.overlay}></div>
@@ -85,7 +85,7 @@ FurnitureGallerySlider.propTypes = {
   setActivePage: PropTypes.func,
   pagesCount: PropTypes.number,
   activeProduct: PropTypes.object,
-  setActiveProduct: PropTypes.func,
+  changeActivProduct: PropTypes.func,
 };
 
 export default FurnitureGallerySlider;
