@@ -132,3 +132,71 @@
 .col {
     padding: 0;
   }
+
+  @media (max-width: 1024px) {
+    .wrapperRightDown {
+      p {
+        font-size: 20px;
+      }
+      p:last-child {
+        font-size: 15px;
+      }
+    }
+    .wrapperRightUp {
+      p {
+        font-size: 30px;
+    
+        .spanSecond {
+          font-size: 20px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .imgLeft {
+      img {
+        height: 300px;
+      }
+    }
+    .imgRight {
+      max-height: 150px;
+      margin: 0 0 20px 0;
+      img {
+        height: 140px;
+      }
+    }
+    .wrapperRightUp {
+      p {
+        font-size: 22px;
+    
+        .spanSecond {
+          font-size: 16px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .imgLeft {
+      margin-bottom: 40px;
+    }
+    .imgRight {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .wrapperRightUp {
+      p {
+        font-size: 20px;
+    
+        .spanSecond {
+          font-size: 14px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
