@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './TopBar.module.scss';
+import { Link } from 'react-router-dom';
 
 const TopBar = () => (
   <div className={styles.root}>
@@ -32,16 +34,27 @@ const TopBar = () => (
         <div className={`col text-right ${styles.topMenu}`}>
           <ul>
             <li>
-              <a yarhref='#'>
+
+              <Link exact to='/login'>
+
                 <FontAwesomeIcon className={styles.icon} icon={faUser} />
                 <span className={styles.login}>Login</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/register'>
+              <Link exact to='/register'>
                 <FontAwesomeIcon className={styles.icon} icon={faLock} />
                 <span className={styles.register}>Register</span>
-              </a>
+              <FontAwesomeIcon className={styles.icon} icon={faUser} />
+              <Link to={'/login'} className={styles.login}>
+                Login
+              </Link>
+            </li>
+            <li>
+              <FontAwesomeIcon className={styles.icon} icon={faLock} />
+              <Link to={'/register'} className={styles.register}>
+                Register
+              </Link>
             </li>
             <li>
               <a href='#'>

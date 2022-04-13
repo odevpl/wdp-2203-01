@@ -27,6 +27,8 @@
     "react-app"
   ],
   "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], 
     "indent": [
       "error",
       2,
@@ -49,4 +51,5 @@
     "no-debugger": "error",
     "jsx-a11y/anchor-is-valid": "off"
   }
+  
 }

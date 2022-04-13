@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../../common/Button/Button';
+import { Link } from 'react-router-dom';
 
 import styles from './Register.module.scss';
 
@@ -57,15 +58,16 @@ const Register = () => {
                 </span>
               </label>
               <div className='d-flex justify-content-center mt-4'>
-                <Button href='/' variant='small'>
+                <Button to='/' variant='small'>
                   Return
                 </Button>
-                <Button href='/' variant='small'>
+                <Button to='/' variant='small'>
                   Register
                 </Button>
               </div>
               <span className='mt-4 text-center'>
-                You have account?<a href='#'>Log in.</a>
+                You have account?
+                <Link to={'/login'}>Log in</Link>
               </span>
             </form>
           </div>

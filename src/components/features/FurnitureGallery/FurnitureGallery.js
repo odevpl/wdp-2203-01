@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './FurnitureGallery.module.scss';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import { useEffect } from 'react';
 //import PropTypes from 'prop-types';
 
 import FurnitureGalleryActiv from '../../common/FurnitureGalleryActiv/FurnitureGalleryActiv';
@@ -10,8 +12,59 @@ import Button from '../../common/Button/Button';
 
 const FurnitureGallery = () => {
   const products = useSelector(state => getAllProducts(state));
-  const sliderProducts = products.slice(0, 6);
   const product = products[0];
+
+  let productsPerSlider = 6;
+
+  const [fadeAll, setFadeAll] = useState(false);
+  const [fadeMainPhoto, setFadeMainPhoto] = useState(false);
+  const [activeTab, setActivTab] = useState('topSeller');
+
+  const [activePage, setActivePage] = useState(0);
+  const [categoryProducts, setCategoryProducts] = useState(
+    products.filter(product => product['topSeller'] === true)
+  );
+  const [sliderProducts, setSliderProducts] = useState(
+    categoryProducts.slice(
+      activePage * productsPerSlider,
+      (activePage + 1) * productsPerSlider
+    )
+  );
+
+  const pagesCount = Math.ceil(categoryProducts.length / productsPerSlider);
+
+  const [activeProduct, setActiveProduct] = useState(sliderProducts[1]);
+
+  const handleCategoryChange = category => {
+    setFadeAll(true);
+    setTimeout(function() {
+      setFadeAll(false);
+      setCategoryProducts(products.filter(product => product[category] === true));
+      setActivePage(0);
+    }, 250);
+  };
+
+  const changeActivProduct = product => {
+    setFadeMainPhoto(true);
+    setTimeout(function() {
+      setFadeMainPhoto(false);
+      setActiveProduct(product);
+      setActivePage(0);
+    }, 250);
+  };
+
+  useEffect(() => {
+    setActiveProduct(categoryProducts[1]);
+  }, [categoryProducts]);
+
+  useEffect(() => {
+    setSliderProducts(
+      categoryProducts.slice(
+        activePage * productsPerSlider,
+        (activePage + 1) * productsPerSlider
+      )
+    );
+  }, [categoryProducts, activePage, productsPerSlider]);
 
   return (
     <div className='container'>
@@ -24,23 +77,76 @@ const FurnitureGallery = () => {
             <div className={styles.menu}>
               <ul className='row'>
                 <li className='col'>
-                  <a href='#'>Featured</a>
+                  <a
+                    href='#'
+                    onClick={() => {
+                      handleCategoryChange('featured');
+                      setActivTab('featured');
+                    }}
+                    className={
+                      activeTab === 'featured' ? styles.active : styles.notActive
+                    }
+                  >
+                    Featured
+                  </a>
                 </li>
                 <li className='col'>
-                  <a href='#' className={styles.active}>
+                  <a
+                    href='#'
+                    onClick={() => {
+                      handleCategoryChange('topSeller');
+                      setActivTab('topSeller');
+                    }}
+                    className={
+                      activeTab === 'topSeller' ? styles.active : styles.notActive
+                    }
+                  >
                     Top seller
                   </a>
                 </li>
                 <li className='col'>
-                  <a href='#'>Sale off</a>
+                  <a
+                    href='#'
+                    onClick={() => {
+                      handleCategoryChange('saleOff');
+                      setActivTab('saleOff');
+                    }}
+                    className={
+                      activeTab === 'saleOff' ? styles.active : styles.notActive
+                    }
+                  >
+                    Sale off
+                  </a>
                 </li>
                 <li className='col'>
-                  <a href='#'>Top rated</a>
+                  <a
+                    href='#'
+                    onClick={() => {
+                      handleCategoryChange('topRated');
+                      setActivTab('topRated');
+                    }}
+                    className={
+                      activeTab === 'topRated' ? styles.active : styles.notActive
+                    }
+                  >
+                    Top rated
+                  </a>
                 </li>
               </ul>
             </div>
-            <FurnitureGalleryActiv {...sliderProducts[1]} />
-            <FurnitureGallerySlider sliderProducts={sliderProducts} />
+            <div className={fadeAll ? styles.noVisability : styles.visability}>
+              <div className={fadeMainPhoto ? styles.noVisability : styles.visability}>
+                <FurnitureGalleryActiv {...activeProduct} />
+              </div>
+              <FurnitureGallerySlider
+                sliderProducts={sliderProducts}
+                activePage={activePage}
+                setActivePage={setActivePage}
+                pagesCount={pagesCount}
+                activeProduct={activeProduct}
+                changeActivProduct={changeActivProduct}
+              />
+            </div>
           </div>
           <div className='col'>
             <div className={styles.photo}>
