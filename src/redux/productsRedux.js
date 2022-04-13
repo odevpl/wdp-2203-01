@@ -14,6 +14,7 @@ export const REMOVE_FROM_FAVORITES = createActionName('REMOVE_FROM_FAVORITES');
 export const CHANGE_AMOUNT_OF_STARS = createActionName('CHANGE_AMOUNT_OF_STARS');
 export const ADD_ACTIVE_CLASS = createActionName('ADD_ACTIVE_CLASS');
 export const REMOVE_ACTIVE_CLASS = createActionName('REMOVE_ACTIVE_CLASS');
+export const UPDATE_INITIAL_STATE = createActionName('UPDATE_INITIAL_STATE');
 
 /* action creators */
 export const createAction_addFavorites = payload => ({
@@ -36,11 +37,16 @@ export const removeActiveClass = payload => ({
   payload,
   type: REMOVE_ACTIVE_CLASS,
 });
+export const updateInitialState = payload => ({
+  payload,
+  type: UPDATE_INITIAL_STATE,
+});
 
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_TO_FAVORITES:
+      console.log(action.payload);
       return statePart.map(product => {
         if (product.id === action.payload.id) {
           product.favorites = true;
@@ -72,6 +78,13 @@ export default function reducer(statePart = [], action = {}) {
       return statePart.map(product => {
         if (product.id === action.payload) {
           product.compareActive = false;
+        }
+        return product;
+      });
+    case UPDATE_INITIAL_STATE:
+      return statePart.map(product => {
+        if (product.id === action.payload.id) {
+          product.favorites = true;
         }
         return product;
       });

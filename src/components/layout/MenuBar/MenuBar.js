@@ -4,6 +4,7 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 import styles from './MenuBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const MenuBar = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -18,27 +19,27 @@ const MenuBar = ({ children }) => {
           <div className={'col ' + styles.menu + (open ? ' ' + styles.activeMenu : '')}>
             <ul>
               <li>
-                <a href='/home' className={styles.active}>
+                <Link to={'/home'} className={styles.active}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='/shop/furniture'>Furniture</a>
+                <Link to={'/shop/furniture'}>Furniture</Link>
               </li>
               <li>
-                <a href='/shop/chair'>Chair</a>
+                <Link to={'/shop/chair'}>Chair</Link>
               </li>
               <li>
-                <a href='/shop/table'>Table</a>
+                <Link to={'/shop/table'}>Table</Link>
               </li>
               <li>
-                <a href='/shop/sofa'>Sofa</a>
+                <Link to={'/shop/sofa'}>Sofa</Link>
               </li>
               <li>
-                <a href='/shop/bedroom'>Bedroom</a>
+                <Link to={'/shop/bedroom'}>Bedroom</Link>
               </li>
               <li>
-                <a href='/blog'>Blog</a>
+                <Link to={'/blog'}>Blog</Link>
               </li>
             </ul>
           </div>

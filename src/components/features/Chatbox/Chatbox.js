@@ -94,7 +94,6 @@ const Chatbox = () => {
             name='entry.724320362'
             id='entry_724320362'
             dir='auto'
-            required='true'
             placeholder={settings.placeholderMessage}
           />
           <button type='submit' className={submit} id={submit}>

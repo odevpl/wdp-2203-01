@@ -5,6 +5,7 @@ import {
   createAction_addFavorites,
   createAction_removeFavorites,
   addActiveClass,
+  updateInitialState,
 } from '../../../redux/productsRedux';
 import { addToCompare, getAllCompare } from '../../../redux/compareRedux';
 
@@ -18,6 +19,7 @@ const mapDispatchToProps = dispatch => ({
   removeFromFavorites: productId => dispatch(createAction_removeFavorites(productId)),
   addToCompare: compareProduct => dispatch(addToCompare(compareProduct)),
   addActiveClass: productId => dispatch(addActiveClass(productId)),
+  updateInitialState: productId => dispatch(updateInitialState(productId)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductBox);

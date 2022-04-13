@@ -121,15 +121,20 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className={fade ? styles.noVisability : styles.visability}>
-            <div className='row'>
-              {categoryProducts
-                .slice(activePage * productsPerPage, (activePage + 1) * productsPerPage)
-                .map(item => (
-                  <div key={item.id} className='col-lg-3 col-sm-6'>
-                    <ProductBox {...item} />
-                  </div>
-                ))}
+          <div className='container'>
+            <div className={fade ? styles.noVisability : styles.visability}>
+              <div className='row'>
+                {categoryProducts
+                  .slice(
+                    activePage * productsPerPage,
+                    (activePage + 1) * productsPerPage
+                  )
+                  .map(item => (
+                    <div key={item.id} className='col-lg-3 col-sm-6'>
+                      <ProductBox {...item} />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>

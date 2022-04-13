@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -12,7 +13,6 @@ import Stars from '../Stars/Stars';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import ProductPopup from '../ProductPopup/ProductPopup';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 
 const ProductBox = ({
   name,
@@ -30,8 +30,7 @@ const ProductBox = ({
   compare,
   compareActive,
   addActiveClass,
-  isCompare,
-  isFavourite,
+  updateInitialState,
 }) => {
   const [showProdPopup, setShowProdPopup] = useState(false);
 
@@ -40,6 +39,14 @@ const ProductBox = ({
     setShowProdPopup(true);
   };
   const handleCloseProdPopup = () => setShowProdPopup(false);
+
+  const myFovorite = localStorage.getItem(id);
+
+  useEffect(() => {
+    if (myFovorite !== null) {
+      updateInitialState({ id });
+    }
+  }, [id, myFovorite, updateInitialState]);
 
   return (
     <div className={styles.root}>
@@ -57,6 +64,10 @@ const ProductBox = ({
           </Button>
         </div>
       </div>
+      <div className={styles.content}>
+        <h5>{name}</h5>
+        <Stars stars={stars} myStars={myStars} id={id} />
+      </div>
       <div className={styles.line}></div>
       <div className={styles.actions}>
         <div className={styles.outlines}>
@@ -65,15 +76,13 @@ const ProductBox = ({
             onClick={e => {
               e.preventDefault();
               favorites ? removeFromFavorites({ id }) : addToFavorites({ id });
+              favorites
+                ? localStorage.removeItem(id, id)
+                : localStorage.setItem(id, id);
             }}
             variant='outline'
           >
-            {isFavourite && (
-              <FontAwesomeIcon className={styles.favoriteActiveIcon} icon={farHeart}>
-                Favorite
-              </FontAwesomeIcon>
-            )}
-            {!isFavourite && <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>}
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
           </Button>
           <Button
             className={compareActive ? styles.active : styles.outlines}
@@ -86,14 +95,7 @@ const ProductBox = ({
               }
             }}
           >
-            {isCompare && (
-              <FontAwesomeIcon className={styles.compareActive} icon={faExchangeAlt}>
-                Add to compare
-              </FontAwesomeIcon>
-            )}
-            {!isCompare && (
-              <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-            )}
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
           </Button>
         </div>
         <div className={styles.priceWraper}>
@@ -138,6 +140,7 @@ ProductBox.propTypes = {
   category: PropTypes.string,
   isFavourite: PropTypes.bool,
   isCompare: PropTypes.bool,
+  updateInitialState: PropTypes.func,
 };
 
 export default ProductBox;
