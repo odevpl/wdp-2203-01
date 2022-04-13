@@ -4,6 +4,7 @@
   .footerMenu {
     background-color: $footer-bg;
     padding: 3rem 0;
+    text-align: center;
 
     .menuWrapper {
       h6 {
@@ -55,6 +56,7 @@
         color: $footer-claim-text;
         font-size: 14px;
         line-height: 26px;
+        text-align: center;
       }
     }
 
@@ -79,6 +81,41 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .footerMenu {
+    .menuWrapper {
+      text-align: center;
+      padding: 40px;      
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .bottomBar{
+    display: block;
+    .copyright{
+      flex-basis: content;
+      left: 0;
+    }
+    .socialMedia{
+      ul{
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bottomBar{
+    .copyright{
+      width: 50%;
+      position: relative;
+      right: 24px;
     }
   }
 }
