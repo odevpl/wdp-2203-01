@@ -65,7 +65,7 @@ const Register = () => {
                 </Button>
               </div>
               <span className='mt-4 text-center'>
-                You have account?<a href='#'>Log in.</a>
+                You have account?<a href='/login'>Log in.</a>
               </span>
             </form>
           </div>
