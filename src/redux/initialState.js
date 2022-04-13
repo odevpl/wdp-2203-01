@@ -1435,6 +1435,36 @@ const initialState = {
       name: 'Brand 6',
       image: 'src=../../images/brands/brand6.jpg',
     },
+    {
+      id: 'brand7',
+      name: 'Brand 7',
+      image: 'src=../../images/brands/brand2.jpg',
+    },
+    {
+      id: 'brand8',
+      name: 'Brand 8',
+      image: 'src=../../images/brands/brand4.jpg',
+    },
+    {
+      id: 'brand9',
+      name: 'Brand 9',
+      image: 'src=../../images/brands/brand6.jpg',
+    },
+    {
+      id: 'brand10',
+      name: 'Brand 10',
+      image: 'src=../../images/brands/brand1.jpg',
+    },
+    {
+      id: 'brand11',
+      name: 'Brand 11',
+      image: 'src=../../images/brands/brand3.jpg',
+    },
+    {
+      id: 'brand12',
+      name: 'Brand 12',
+      image: 'src=../../images/brands/brand5.jpg',
+    },
   ],
   posts: [
     {
