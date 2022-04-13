@@ -8,7 +8,7 @@ const Promotions = () => {
     <div className={styles.root}>
       <div className='container'>
         <div className='row'>
-          <div className={'col-6 '}>
+          <div className={'col-12 col-sm-6'}>
             <div className={styles.imgLeft}>
               <img src={initialState.products[0].image} alt='sofa' />
               <div className={'col' + styles.col}>
@@ -21,7 +21,7 @@ const Promotions = () => {
               </div>
             </div>
           </div>
-          <div className={'col-6 '}>
+          <div className={'col-12 col-sm-6'}>
             <div className={'col' + styles.col}>
               <div className={styles.containerUp}>
                 <div className={styles.imgRight}>
