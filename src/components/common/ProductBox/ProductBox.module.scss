@@ -17,6 +17,7 @@
       position: center;
       repeat: no-repeat;
     }
+    
     overflow: hidden;
     align-items: flex-end;
     width: auto;
@@ -51,6 +52,12 @@
       padding: 2px 6px;
       opacity: 0;
     }
+
+    .hotDealButtons {
+      margin-bottom: 110px;
+      justify-content: center;
+    }
+   
   }
 
   .content {
