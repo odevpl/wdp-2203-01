@@ -1,0 +1,135 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 50px 0;
+
+  .name {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    margin: 30px 0;
+    background-color: $cart-name-background;
+  }
+
+  .cartBody {
+    border: solid 1px $cart-cartBody-border;
+    border-left: none;
+
+    .bodyHeader {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: $cart-bodyHeader;
+      border-bottom: solid 1px $cart-bodyHeader-border;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      .productName {
+        padding-left: 50px;
+      }
+
+      .productQuantity {
+        padding-left: 25px;
+      }
+    }
+
+    .bodyFooter {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: -15px;
+
+      a {
+        text-transform: uppercase;
+        margin-left: 15px;
+        padding: 10px 25px;
+
+        &.noActive {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+
+      .coupon {
+        input {
+          border: solid 1px $cart-input-border;
+          border-radius: 5px;
+          padding: 3px 0;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            font-size: 14px;
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .cartTotal {
+    display: flex;
+    justify-content: end;
+    margin: 30px 0 60px 0;
+    padding: 0;
+
+    .cartTotalBody {
+      display: flex;
+      flex-wrap: wrap;
+      border: solid 1px $cart-totalBody-border;
+      border-left: none;
+      padding: 0;
+
+      .cartTotalHead {
+        height: 60px;
+        line-height: 60px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: $cart-totalHead-background;
+        border-bottom: solid 1px $cart-totalHead-border;
+      }
+
+      .cartTotalSummary {
+        display: flex;
+        margin: auto;
+        padding: 0;
+
+        &:last-of-type {
+          margin-bottom: 25px;
+
+          span {
+            &:last-of-type {
+              font-weight: 600;
+            }
+          }
+        }
+
+        span {
+          padding: 10px 10px;
+          border-bottom: solid 1px $cart-cartTotal-span-border;
+
+          &:first-of-type {
+            font-weight: 600;
+          }
+
+          &:last-of-type {
+            border-left: solid 1px $cart-cartTotal-span-border;
+            color: $cart-cartTotal-span-color;
+          }
+        }
+      }
+
+      a {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 0;
+        margin: auto;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

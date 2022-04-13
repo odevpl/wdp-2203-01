@@ -67,6 +67,7 @@ const MenuBar = ({ children }) => {
               >
                 blog
               </NavLink>
+
             </ul>
           </div>
           <a href='#' className={styles.dropdown} onClick={() => setOpen(!open)}>
