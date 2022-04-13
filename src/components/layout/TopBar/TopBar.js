@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,6 +34,15 @@ const TopBar = () => (
         <div className={`col text-right ${styles.topMenu}`}>
           <ul>
             <li>
+              <Link exact to='/login'>
+                <FontAwesomeIcon className={styles.icon} icon={faUser} />
+                <span className={styles.login}>Login</span>
+              </Link>
+            </li>
+            <li>
+              <Link exact to='/register'>
+                <FontAwesomeIcon className={styles.icon} icon={faLock} />
+                <span className={styles.register}>Register</span>
               <FontAwesomeIcon className={styles.icon} icon={faUser} />
               <Link to={'/login'} className={styles.login}>
                 Login

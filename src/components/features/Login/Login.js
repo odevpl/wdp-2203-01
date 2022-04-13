@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../common/Button/Button';
 
 import styles from './Login.module.scss';
@@ -31,7 +32,7 @@ const Login = () => {
                 <input className='col-12' type='text' />
               </label>
               <div className='d-flex justify-content-center mt-4'>
-                <Button href='/' variant='small'>
+                <Button to='/' variant='small'>
                   Login
                 </Button>
               </div>
@@ -41,7 +42,7 @@ const Login = () => {
                 <a href='#'>Forgot password?</a>
               </span>
               <span className='mt-3 text-center'>
-                <a href='/register'>Register</a>
+                <Link to={'/register'}>Register</Link>
               </span>
             </div>
           </div>
